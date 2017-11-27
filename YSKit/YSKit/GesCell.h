@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#define SWIPEWIDTH 44
+
 @interface GesCell : UITableViewCell
 
-@property (nonatomic, copy) NSString *titleStr;
+@property (nonatomic, copy) NSString *tip;
 
 @property (nonatomic, copy) void(^alertAction)(void);
 

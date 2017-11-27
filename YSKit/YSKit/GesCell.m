@@ -12,38 +12,22 @@
 
 @property (nonatomic, strong) UIButton *swipeBtn;
 
+@property (nonatomic, strong) UILabel *tipLbl;
+
 @end
 
 @implementation GesCell
 
-
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+#pragma mark --
+#pragma mark init method
+- (void)setTip:(NSString *)tip
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        UILabel *tip = [[UILabel alloc] initWithFrame:CGRectMake( 0, 0, [[UIScreen mainScreen] bounds].size.width, 44)];
-        [self.contentView addSubview:tip];
-        
-        tip.textColor = [UIColor grayColor];
-        tip.textAlignment = NSTextAlignmentCenter;
-        tip.backgroundColor = [UIColor greenColor];
-    }
-    return self;
+    _tipLbl.text = tip;
 }
 
 
-- (void)setTitleStr:(NSString *)titleStr
-{
-    _titleStr = titleStr;
-    [self.contentView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:[UILabel class]]) {
-            [(UILabel *)obj setText:titleStr];
-            *stop = YES;
-        }
-    }];
-}
-
-
+#pragma mark --
+#pragma mark call method
 /**
  往左移
  
@@ -86,12 +70,9 @@
     self.swipeBtn.frame = frame;
 }
 
-- (void)layoutSubviews
-{
-    [self swipeBtn];
-}
 
-
+#pragma mark --
+#pragma mark btn action
 - (void)responeseBtnAction
 {
     if (self.alertAction) {
@@ -99,12 +80,22 @@
     }
 }
 
+
+- (void)layoutSubviews
+{
+    [self tipLbl];
+    [self swipeBtn];
+}
+
+
+#pragma mark --
+#pragma mark lazy load
 - (UIButton *)swipeBtn
 {
     if (!_swipeBtn) {
         CGFloat width = [UIScreen mainScreen].bounds.size.width;
         _swipeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _swipeBtn.frame = CGRectMake( width, 0, 44, 44);
+        _swipeBtn.frame = CGRectMake( width, 0, SWIPEWIDTH, 44);
         _swipeBtn.backgroundColor = [UIColor redColor];
         [_swipeBtn addTarget:self
                       action:@selector(responeseBtnAction)
@@ -114,4 +105,11 @@
     return _swipeBtn;
 }
 
+- (UILabel *)tipLbl{
+    if (!_tipLbl) {
+        _tipLbl = [[UILabel alloc] initWithFrame:CGRectMake( 10, 0, [[UIScreen mainScreen] bounds].size.width - 10, 44)];
+        [self.contentView addSubview:_tipLbl];
+    }
+    return _tipLbl;
+}
 @end
