@@ -15,9 +15,12 @@
 		C44EC5F31FCBF2AC00839DF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5F21FCBF2AC00839DF4 /* main.m */; };
 		C44EC5FB1FCBF2E100839DF4 /* GesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5FA1FCBF2E100839DF4 /* GesCell.m */; };
 		C44EC5FE1FCBF86900839DF4 /* YSSpeechVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5FD1FCBF86900839DF4 /* YSSpeechVC.m */; };
+		E24B403B1E0B77E538B966EE /* libPods-YSKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E6CBB3324961969B9D71A7 /* libPods-YSKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01CA8E74DA1E6CFD9C74CAA7 /* Pods-YSKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YSKit/Pods-YSKit.debug.xcconfig"; sourceTree = "<group>"; };
+		04E6CBB3324961969B9D71A7 /* libPods-YSKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YSKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44EC5E01FCBF2AC00839DF4 /* YSKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44EC5E31FCBF2AC00839DF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C44EC5E41FCBF2AC00839DF4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 		C44EC5FC1FCBF86900839DF4 /* YSSpeechVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSSpeechVC.h; sourceTree = "<group>"; };
 		C44EC5FD1FCBF86900839DF4 /* YSSpeechVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSSpeechVC.m; sourceTree = "<group>"; };
 		C44EC6001FCBF8B800839DF4 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
+		DD80703350434711BFD36C9A /* Pods-YSKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSKit/Pods-YSKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24B403B1E0B77E538B966EE /* libPods-YSKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,7 @@
 				C44EC5E21FCBF2AC00839DF4 /* YSKit */,
 				C44EC5E11FCBF2AC00839DF4 /* Products */,
 				C44EC5FF1FCBF8B800839DF4 /* Frameworks */,
+				FBF3F13DCED28139ACCCF2F4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,8 +93,18 @@
 			isa = PBXGroup;
 			children = (
 				C44EC6001FCBF8B800839DF4 /* Speech.framework */,
+				04E6CBB3324961969B9D71A7 /* libPods-YSKit.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBF3F13DCED28139ACCCF2F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01CA8E74DA1E6CFD9C74CAA7 /* Pods-YSKit.debug.xcconfig */,
+				DD80703350434711BFD36C9A /* Pods-YSKit.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,9 +114,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C44EC5F61FCBF2AC00839DF4 /* Build configuration list for PBXNativeTarget "YSKit" */;
 			buildPhases = (
+				367B57B9305EB265FCB0C9BE /* [CP] Check Pods Manifest.lock */,
 				C44EC5DC1FCBF2AC00839DF4 /* Sources */,
 				C44EC5DD1FCBF2AC00839DF4 /* Frameworks */,
 				C44EC5DE1FCBF2AC00839DF4 /* Resources */,
+				ED3EF9E37872AB392AE16D3E /* [CP] Embed Pods Frameworks */,
+				49D6AA0B4C3B9D0D6FAB51A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,6 +175,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		367B57B9305EB265FCB0C9BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YSKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49D6AA0B4C3B9D0D6FAB51A0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YSKit/Pods-YSKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED3EF9E37872AB392AE16D3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YSKit/Pods-YSKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C44EC5DC1FCBF2AC00839DF4 /* Sources */ = {
@@ -298,6 +368,7 @@
 		};
 		C44EC5F71FCBF2AC00839DF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01CA8E74DA1E6CFD9C74CAA7 /* Pods-YSKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +382,7 @@
 		};
 		C44EC5F81FCBF2AC00839DF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD80703350434711BFD36C9A /* Pods-YSKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,6 +7,9 @@
 //
 
 #import "GesCell.h"
+#import <Masonry.h>
+
+#define SEPLINEH 1.0/[[UIScreen mainScreen] scale]
 
 @interface GesCell()
 
@@ -14,17 +17,37 @@
 
 @property (nonatomic, strong) UILabel *tipLbl;
 
+@property (nonatomic, strong) UIImageView *sepLineImg;
+
 @end
 
 @implementation GesCell
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self sepLineImg];
+    }
+    return self;
+}
 
 #pragma mark --
 #pragma mark init method
 - (void)setTip:(NSString *)tip
 {
-    _tipLbl.text = tip;
+    self.tipLbl.text = tip;
 }
 
+- (void)showSepLine
+{
+    self.sepLineImg.hidden = NO;
+}
+
+- (void)hidSepLine
+{
+    self.sepLineImg.hidden = YES;
+}
 
 #pragma mark --
 #pragma mark call method
@@ -93,23 +116,49 @@
 - (UIButton *)swipeBtn
 {
     if (!_swipeBtn) {
-        CGFloat width = [UIScreen mainScreen].bounds.size.width;
         _swipeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _swipeBtn.frame = CGRectMake( width, 0, SWIPEWIDTH, 44);
+        [self addSubview:_swipeBtn];
+
+        [_swipeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(_swipeBtn.superview.mas_right);
+            make.top.equalTo(_swipeBtn.superview);
+            make.height.equalTo(_swipeBtn.superview);
+            make.width.equalTo(@(44));
+        }];
         _swipeBtn.backgroundColor = [UIColor redColor];
         [_swipeBtn addTarget:self
                       action:@selector(responeseBtnAction)
             forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:_swipeBtn];
     }
     return _swipeBtn;
 }
 
-- (UILabel *)tipLbl{
+- (UILabel *)tipLbl
+{
     if (!_tipLbl) {
-        _tipLbl = [[UILabel alloc] initWithFrame:CGRectMake( 10, 0, [[UIScreen mainScreen] bounds].size.width - 10, 44)];
+        _tipLbl = [UILabel new];
         [self.contentView addSubview:_tipLbl];
+        [_tipLbl mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.offset(15);
+            make.centerY.equalTo(_tipLbl.superview.mas_centerY);
+        }];
     }
     return _tipLbl;
+}
+
+- (UIImageView *)sepLineImg
+{
+    if (!_sepLineImg) {
+        _sepLineImg = [UIImageView new];
+        [self.contentView addSubview:_sepLineImg];
+        [_sepLineImg mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.offset(15);
+            make.right.offset(0);
+            make.bottom.equalTo(_sepLineImg.superview).offset(0);
+            make.height.offset(SEPLINEH);
+        }];
+        _sepLineImg.backgroundColor = [UIColor brownColor];
+    }
+    return _sepLineImg;
 }
 @end

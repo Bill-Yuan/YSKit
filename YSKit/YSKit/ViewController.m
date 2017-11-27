@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "GesCell.h"
+#import <Masonry.h>
 
 
 @interface ViewController ()
@@ -106,6 +107,7 @@ static double pointX = 0;
     return 20;
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GesCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([GesCell class])];
@@ -140,12 +142,11 @@ static double pointX = 0;
     if (!_tableV) {
         _tableV = [[UITableView alloc] initWithFrame:self.view.bounds];
         [self.view addSubview:_tableV];
-        _tableV.backgroundColor = [UIColor brownColor];
         _tableV.delegate = self;
         _tableV.dataSource = self;
+        _tableV.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableV registerClass:[GesCell class] forCellReuseIdentifier:NSStringFromClass([GesCell class])];
-        _tableV.estimatedRowHeight = 44;
-        
+ 
         UISwipeGestureRecognizer *lGes = [[UISwipeGestureRecognizer alloc] initWithTarget:self
                                                                                    action:@selector(swipe:)];
         lGes.direction = UISwipeGestureRecognizerDirectionLeft;
