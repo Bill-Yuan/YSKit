@@ -14,6 +14,7 @@
 		C44EC5F01FCBF2AC00839DF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C44EC5EE1FCBF2AC00839DF4 /* LaunchScreen.storyboard */; };
 		C44EC5F31FCBF2AC00839DF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5F21FCBF2AC00839DF4 /* main.m */; };
 		C44EC5FB1FCBF2E100839DF4 /* GesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5FA1FCBF2E100839DF4 /* GesCell.m */; };
+		C44EC5FE1FCBF86900839DF4 /* YSSpeechVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5FD1FCBF86900839DF4 /* YSSpeechVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,9 @@
 		C44EC5F21FCBF2AC00839DF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C44EC5F91FCBF2E100839DF4 /* GesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GesCell.h; sourceTree = "<group>"; };
 		C44EC5FA1FCBF2E100839DF4 /* GesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GesCell.m; sourceTree = "<group>"; };
+		C44EC5FC1FCBF86900839DF4 /* YSSpeechVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSSpeechVC.h; sourceTree = "<group>"; };
+		C44EC5FD1FCBF86900839DF4 /* YSSpeechVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSSpeechVC.m; sourceTree = "<group>"; };
+		C44EC6001FCBF8B800839DF4 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			children = (
 				C44EC5E21FCBF2AC00839DF4 /* YSKit */,
 				C44EC5E11FCBF2AC00839DF4 /* Products */,
+				C44EC5FF1FCBF8B800839DF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +70,8 @@
 				C44EC5E41FCBF2AC00839DF4 /* AppDelegate.m */,
 				C44EC5E61FCBF2AC00839DF4 /* ViewController.h */,
 				C44EC5E71FCBF2AC00839DF4 /* ViewController.m */,
+				C44EC5FC1FCBF86900839DF4 /* YSSpeechVC.h */,
+				C44EC5FD1FCBF86900839DF4 /* YSSpeechVC.m */,
 				C44EC5F91FCBF2E100839DF4 /* GesCell.h */,
 				C44EC5FA1FCBF2E100839DF4 /* GesCell.m */,
 				C44EC5E91FCBF2AC00839DF4 /* Main.storyboard */,
@@ -74,6 +81,14 @@
 				C44EC5F21FCBF2AC00839DF4 /* main.m */,
 			);
 			path = YSKit;
+			sourceTree = "<group>";
+		};
+		C44EC5FF1FCBF8B800839DF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C44EC6001FCBF8B800839DF4 /* Speech.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C44EC5E81FCBF2AC00839DF4 /* ViewController.m in Sources */,
+				C44EC5FE1FCBF86900839DF4 /* YSSpeechVC.m in Sources */,
 				C44EC5F31FCBF2AC00839DF4 /* main.m in Sources */,
 				C44EC5E51FCBF2AC00839DF4 /* AppDelegate.m in Sources */,
 				C44EC5FB1FCBF2E100839DF4 /* GesCell.m in Sources */,
