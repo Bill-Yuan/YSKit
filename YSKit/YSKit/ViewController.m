@@ -34,12 +34,8 @@ UIGestureRecognizerDelegate
 
 #pragma mark --
 #pragma mark ges action
-static double pointX = 0;
-- (void)swipe:(UIPanGestureRecognizer *)ges
+- (void)resetSelectedState:(NSIndexPath *)indexPath
 {
-    CGPoint point = [ges locationInView:_tableV];
-    
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:floor(point.y/44) inSection:0];
     if (!_sIdxPath) {
         _sIdxPath = indexPath;
     }else{
@@ -49,6 +45,14 @@ static double pointX = 0;
         }
         _sIdxPath = indexPath;
     }
+}
+
+static double pointX = 0;
+- (void)swipe:(UIPanGestureRecognizer *)ges
+{
+    CGPoint point = [ges locationInView:_tableV];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:floor(point.y/44) inSection:0];
+    [self resetSelectedState:indexPath];
     
     GesCell *cell = [_tableV cellForRowAtIndexPath:_sIdxPath];
     switch (ges.state) {
@@ -77,10 +81,14 @@ static double pointX = 0;
                 if (offsetX > 0) {
                     if (offsetX >= SWIPEWIDTH) {
                         offsetX = SWIPEWIDTH;
+                    }else{
+                        offsetX = SWIPEWIDTH;
                     }
                     [cell swipeRightOffsetX:offsetX];
                 }else{
                     if(offsetX <= -SWIPEWIDTH){
+                        offsetX = -SWIPEWIDTH;
+                    }else{
                         offsetX = -SWIPEWIDTH;
                     }
                     [cell swipeLeftOffsetX:offsetX];
@@ -125,14 +133,19 @@ static double pointX = 0;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示"
-                                                                   message:[NSString stringWithFormat:@"%ld",(long)indexPath.row]
-                                                            preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"重置"
-                                                          style:UIAlertActionStyleDestructive
-                                                        handler:nil];
-    [alert addAction:resetAction];
-    [self presentViewController:alert animated:YES completion:nil];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self resetSelectedState:indexPath];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, .1*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示"
+                                                                       message:[NSString stringWithFormat:@"%ld",(long)indexPath.row]
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"重置"
+                                                              style:UIAlertActionStyleDestructive
+                                                            handler:nil];
+        [alert addAction:resetAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    });
 }
 
 #pragma mark --
