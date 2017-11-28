@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "GesCell.h"
 #import <Masonry.h>
-
+#import "YSTSArray.h"
 
 @interface ViewController ()
 <
@@ -21,6 +21,7 @@ UIGestureRecognizerDelegate
 @property (nonatomic, strong) UITableView *tableV;
 @property (nonatomic, strong) NSIndexPath *sIdxPath;
 
+@property (nonatomic, strong) YSTSArray *array;
 @end
 
 @implementation ViewController
@@ -28,7 +29,34 @@ UIGestureRecognizerDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self setData];
+}
+
+- (void)setData
+{
+    dispatch_async(dispatch_queue_create(0, 0), ^{
+        for ( int i = 0; i < 200; i++) {
+            [self.array addObject:@(i)];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableV reloadData];
+        });
+    });
+}
+
+
+/**
+ 子线程和主线程操作数据的线程同步
+ */
+- (void)delIdx:(NSIndexPath *)indexPath
+{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [self.array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            NSLog(@"-----%@----%@",obj,[NSThread currentThread]);
+        }];
+    });
     
+    [self.array removeObjectAtIndex:indexPath.row];
     [self.tableV reloadData];
 }
 
@@ -112,7 +140,7 @@ static double pointX = 0;
 #pragma mark tableView delegate method
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return self.array.count;
 }
 
 
@@ -134,6 +162,7 @@ static double pointX = 0;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self delIdx:indexPath];
     [self resetSelectedState:indexPath];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, .1*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
@@ -174,4 +203,11 @@ static double pointX = 0;
     return _tableV;
 }
 
+- (YSTSArray *)array
+{
+    if (!_array) {
+        _array = [[YSTSArray alloc] init];
+    }
+    return _array;
+}
 @end
