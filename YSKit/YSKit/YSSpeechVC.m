@@ -59,26 +59,34 @@ SFSpeechRecognizerDelegate
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [SFSpeechRecognizer requestAuthorization:^(SFSpeechRecognizerAuthorizationStatus status) {
-        switch (status) {
-            case SFSpeechRecognizerAuthorizationStatusNotDetermined:
-                break;
-            case SFSpeechRecognizerAuthorizationStatusDenied:
-                break;
-            case SFSpeechRecognizerAuthorizationStatusRestricted:
-                break;
-            case SFSpeechRecognizerAuthorizationStatusAuthorized:
-                break;
-            default:
-                break;
-                
-        }
-    }];
+    if (@available(iOS 10.0, *)) {
+        [SFSpeechRecognizer requestAuthorization:^(SFSpeechRecognizerAuthorizationStatus status) {
+            switch (status) {
+                case SFSpeechRecognizerAuthorizationStatusNotDetermined:
+                    break;
+                case SFSpeechRecognizerAuthorizationStatusDenied:
+                    break;
+                case SFSpeechRecognizerAuthorizationStatusRestricted:
+                    break;
+                case SFSpeechRecognizerAuthorizationStatusAuthorized:
+                    break;
+                default:
+                    break;
+                    
+            }
+        }];
+    } else {
+        // Fallback on earlier versions
+    }
     
     self.startBtn.enabled = NO;
     self.audioEngine = [AVAudioEngine new];
-    self.speechRecognizer = [[SFSpeechRecognizer alloc] initWithLocale:
-                             [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
+    if (@available(iOS 10.0, *)) {
+        self.speechRecognizer = [[SFSpeechRecognizer alloc] initWithLocale:
+                                 [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
+    } else {
+        // Fallback on earlier versions
+    }
     self.speechRecognizer.delegate = self;
     
     // 初始化语音处理器的输入模式
@@ -102,15 +110,19 @@ SFSpeechRecognizerDelegate
 
 - (void)onStartBtnClicked
 {
-    if (self.currentSpeechTask.state == SFSpeechRecognitionTaskStateRunning){  // 如果当前进程状态是进行中
-        [self.startBtn setTitle:@"开始录制" forState:UIControlStateNormal];
-        // 停止语音识别
-        [self stopDictating];
-    }else {  // 进程状态不在进行中
-        [self.startBtn setTitle:@"停止录制" forState:UIControlStateNormal];
-        self.showLb.text = @"等待....";
-        // 开启语音识别
-        [self startDictating];
+    if (@available(iOS 10.0, *)) {
+        if (self.currentSpeechTask.state == SFSpeechRecognitionTaskStateRunning){  // 如果当前进程状态是进行中
+            [self.startBtn setTitle:@"开始录制" forState:UIControlStateNormal];
+            // 停止语音识别
+            [self stopDictating];
+        }else {  // 进程状态不在进行中
+            [self.startBtn setTitle:@"停止录制" forState:UIControlStateNormal];
+            self.showLb.text = @"等待....";
+            // 开启语音识别
+            [self startDictating];
+        }
+    } else {
+        // Fallback on earlier versions
     }
 }
 
@@ -122,17 +134,25 @@ SFSpeechRecognizerDelegate
     [self.audioEngine startAndReturnError: &error];
     
     // 初始化
-    self.speechRequest = [SFSpeechAudioBufferRecognitionRequest new];
+    if (@available(iOS 10.0, *)) {
+        self.speechRequest = [SFSpeechAudioBufferRecognitionRequest new];
+    } else {
+        // Fallback on earlier versions
+    }
     
     // 使用speechRequest请求进行识别
-    self.currentSpeechTask =
-    [self.speechRecognizer recognitionTaskWithRequest:self.speechRequest
-                                        resultHandler:^(SFSpeechRecognitionResult * _Nullable result,NSError * _Nullable error)
-     {
-         // 识别结果，识别后的操作
-         if (result == NULL) return;
-         self.showLb.text = result.bestTranscription.formattedString;
-     }];
+    if (@available(iOS 10.0, *)) {
+        self.currentSpeechTask =
+        [self.speechRecognizer recognitionTaskWithRequest:self.speechRequest
+                                            resultHandler:^(SFSpeechRecognitionResult * _Nullable result,NSError * _Nullable error)
+         {
+             // 识别结果，识别后的操作
+             if (result == NULL) return;
+             self.showLb.text = result.bestTranscription.formattedString;
+         }];
+    } else {
+        // Fallback on earlier versions
+    }
 }
 
 - (void)stopDictating
