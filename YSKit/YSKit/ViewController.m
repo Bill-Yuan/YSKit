@@ -35,7 +35,7 @@ UIGestureRecognizerDelegate
 - (void)setData
 {
     dispatch_async(dispatch_queue_create(0, 0), ^{
-        for ( int i = 0; i < 200; i++) {
+        for ( int i = 0; i < 20; i++) {
             [self.array addObject:@(i)];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
