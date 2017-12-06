@@ -36,6 +36,7 @@
 #pragma mark init method
 - (void)setTip:(NSString *)tip
 {
+    _tip = tip;
     self.tipLbl.text = tip;
 }
 

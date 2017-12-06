@@ -42,6 +42,8 @@ UIGestureRecognizerDelegate
             [self.tableV reloadData];
         });
     });
+    
+    _testBlock = 12;
 }
 
 
@@ -149,6 +151,8 @@ static double pointX = 0;
     GesCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([GesCell class])];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.tip = [NSString stringWithFormat:@"当前:%ld行",(long)indexPath.row];
+    NSLog(@"******(%@)*****",cell.tip);
+    
     __weak ViewController *wSelf = self;
     cell.alertAction = ^{
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"点击侧滑" preferredStyle:UIAlertControllerStyleAlert];
