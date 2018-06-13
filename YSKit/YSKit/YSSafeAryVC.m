@@ -6,12 +6,12 @@
 //  Copyright © 2017年 YS. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "YSSafeAryVC.h"
 #import "GesCell.h"
 #import <Masonry.h>
 #import "YSTSArray.h"
 
-@interface ViewController ()
+@interface YSSafeAryVC ()
 <
 UITableViewDelegate,
 UITableViewDataSource,
@@ -24,11 +24,13 @@ UIGestureRecognizerDelegate
 @property (nonatomic, strong) YSTSArray *array;
 @end
 
-@implementation ViewController
+@implementation YSSafeAryVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     [self setData];
 }
 
@@ -153,7 +155,7 @@ static double pointX = 0;
     cell.tip = [NSString stringWithFormat:@"当前:%ld行",(long)indexPath.row];
     NSLog(@"******(%@)*****",cell.tip);
     
-    __weak ViewController *wSelf = self;
+    __weak YSSafeAryVC *wSelf = self;
     cell.alertAction = ^{
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"点击侧滑" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *resetAction = [UIAlertAction actionWithTitle:@"重置" style:UIAlertActionStyleDestructive handler:nil];

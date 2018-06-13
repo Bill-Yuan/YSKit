@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "YSControlVC.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSLog(@"测试Tag修改和合并================");
+
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [_window setBackgroundColor:[UIColor whiteColor]];
+    [_window setRootViewController:[YSControlVC new]];
+    [_window makeKeyAndVisible];
+    
     return YES;
 }
 

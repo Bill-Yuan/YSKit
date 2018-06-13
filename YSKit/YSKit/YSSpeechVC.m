@@ -59,6 +59,9 @@ SFSpeechRecognizerDelegate
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.view.backgroundColor = [UIColor whiteColor];
+
+    
     if (@available(iOS 10.0, *)) {
         [SFSpeechRecognizer requestAuthorization:^(SFSpeechRecognizerAuthorizationStatus status) {
             switch (status) {

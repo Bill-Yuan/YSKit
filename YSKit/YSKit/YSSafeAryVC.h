@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface YSSafeAryVC : UIViewController
 
 @property (nonatomic, assign, readonly) NSInteger testBlock;
 
