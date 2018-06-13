@@ -106,21 +106,15 @@
 		C44EC5E21FCBF2AC00839DF4 /* YSKit */ = {
 			isa = PBXGroup;
 			children = (
+				C44EC5E31FCBF2AC00839DF4 /* AppDelegate.h */,
+				C44EC5E41FCBF2AC00839DF4 /* AppDelegate.m */,
+				C49A70D520D0BE06004AA43C /* 侧滑 */,
+				C4A68D9A20D0E81300334B9B /* 语音 */,
+				C4A68D9920D0E80000334B9B /* 线程安全 */,
+				C46354951FCD133600FD1602 /* Util */,
 				C49A70EC20D0BE1F004AA43C /* CusView */,
 				C49A70CB20D0BE06004AA43C /* TestCase */,
 				C49A70D020D0BE06004AA43C /* UIKit+Setting */,
-				C46354951FCD133600FD1602 /* Util */,
-				C44EC5E31FCBF2AC00839DF4 /* AppDelegate.h */,
-				C44EC5E41FCBF2AC00839DF4 /* AppDelegate.m */,
-				C49A70D520D0BE06004AA43C /* Slide */,
-				C44EC5E61FCBF2AC00839DF4 /* YSSafeAryVC.h */,
-				C44EC5E71FCBF2AC00839DF4 /* YSSafeAryVC.m */,
-				C49A70E920D0BE0E004AA43C /* YSSettingMgr.h */,
-				C49A70EA20D0BE0E004AA43C /* YSSettingMgr.m */,
-				C44EC5FC1FCBF86900839DF4 /* YSSpeechVC.h */,
-				C44EC5FD1FCBF86900839DF4 /* YSSpeechVC.m */,
-				C44EC5F91FCBF2E100839DF4 /* GesCell.h */,
-				C44EC5FA1FCBF2E100839DF4 /* GesCell.m */,
 				C44EC5EC1FCBF2AC00839DF4 /* Assets.xcassets */,
 				C44EC5EE1FCBF2AC00839DF4 /* LaunchScreen.storyboard */,
 				C44EC5F11FCBF2AC00839DF4 /* Info.plist */,
@@ -150,9 +144,9 @@
 		C49A70CB20D0BE06004AA43C /* TestCase */ = {
 			isa = PBXGroup;
 			children = (
+				C49A70CE20D0BE06004AA43C /* YSKitCase.h */,
 				C49A70CC20D0BE06004AA43C /* YSKitCase.m */,
 				C49A70CD20D0BE06004AA43C /* YSFoundationCase.h */,
-				C49A70CE20D0BE06004AA43C /* YSKitCase.h */,
 				C49A70CF20D0BE06004AA43C /* YSFoundationCase.m */,
 			);
 			path = TestCase;
@@ -162,16 +156,18 @@
 			isa = PBXGroup;
 			children = (
 				C49A70D120D0BE06004AA43C /* UIButton+Setting.h */,
-				C49A70D220D0BE06004AA43C /* UIViewController+Setting.h */,
 				C49A70D320D0BE06004AA43C /* UIButton+Setting.m */,
+				C49A70D220D0BE06004AA43C /* UIViewController+Setting.h */,
 				C49A70D420D0BE06004AA43C /* UIViewController+Setting.m */,
 			);
 			path = "UIKit+Setting";
 			sourceTree = "<group>";
 		};
-		C49A70D520D0BE06004AA43C /* Slide */ = {
+		C49A70D520D0BE06004AA43C /* 侧滑 */ = {
 			isa = PBXGroup;
 			children = (
+				C49A70E920D0BE0E004AA43C /* YSSettingMgr.h */,
+				C49A70EA20D0BE0E004AA43C /* YSSettingMgr.m */,
 				C49A70DC20D0BE06004AA43C /* YSControlVC.h */,
 				C49A70D820D0BE06004AA43C /* YSControlVC.m */,
 				C49A70DE20D0BE06004AA43C /* YSLeftVC.h */,
@@ -183,7 +179,7 @@
 				C49A70D920D0BE06004AA43C /* YSCenterDetailVC.h */,
 				C49A70DD20D0BE06004AA43C /* YSCenterDetailVC.m */,
 			);
-			path = Slide;
+			path = "侧滑";
 			sourceTree = "<group>";
 		};
 		C49A70EC20D0BE1F004AA43C /* CusView */ = {
@@ -193,6 +189,26 @@
 				C49A70EE20D0BE1F004AA43C /* YSCusBtn.m */,
 			);
 			path = CusView;
+			sourceTree = "<group>";
+		};
+		C4A68D9920D0E80000334B9B /* 线程安全 */ = {
+			isa = PBXGroup;
+			children = (
+				C44EC5E61FCBF2AC00839DF4 /* YSSafeAryVC.h */,
+				C44EC5E71FCBF2AC00839DF4 /* YSSafeAryVC.m */,
+				C44EC5F91FCBF2E100839DF4 /* GesCell.h */,
+				C44EC5FA1FCBF2E100839DF4 /* GesCell.m */,
+			);
+			path = "线程安全";
+			sourceTree = "<group>";
+		};
+		C4A68D9A20D0E81300334B9B /* 语音 */ = {
+			isa = PBXGroup;
+			children = (
+				C44EC5FC1FCBF86900839DF4 /* YSSpeechVC.h */,
+				C44EC5FD1FCBF86900839DF4 /* YSSpeechVC.m */,
+			);
+			path = "语音";
 			sourceTree = "<group>";
 		};
 		FBF3F13DCED28139ACCCF2F4 /* Pods */ = {
