@@ -11,8 +11,9 @@
 
 #import <objc/runtime.h>
 
-#import "YSCusBtn.h"
 #import "YSSettingMgr.h"
+
+#import "UIButton+Setting.h"
 #import "UIViewController+Setting.h"
 
 
@@ -21,7 +22,6 @@
 
 @interface YSCenterVC ()<UIScrollViewDelegate>
 
-@property (nonatomic, strong) YSCusBtn *btn;
 @property (nonatomic, strong) UIButton *btn1;
 @property (nonatomic, strong) UIButton *btn2;
 @property (nonatomic, strong) UIButton *btn3;
@@ -78,9 +78,6 @@
 
 - (void)initControl
 {
-    [self.btn setDay:[UIColor blackColor] TxtColor:[UIColor whiteColor]];
-    [self.btn setNight:[UIColor grayColor] TxtColor:[UIColor blackColor]];
-    
     [self.btn1 setDay:[UIColor grayColor] TxtColor:[UIColor blackColor]];
     [self.btn1 setNight:[UIColor blackColor] TxtColor:[UIColor whiteColor]];
     
@@ -105,8 +102,7 @@
 
 - (void)btnAction:(UIButton *)sender
 {
-    [[YSSettingMgr shareInstance] changeTheme];
-    
+    NSLog(@"=======%d======",sender.tag);
     switch (sender.tag) {
         case 1:{
             [self.navigationController pushViewController:[YSSafeAryVC new] animated:YES];
@@ -119,20 +115,7 @@
         default:
             break;
     }
-}
-
-- (YSCusBtn *)btn
-{
-    if (!_btn) {
-        _btn = [YSCusBtn buttonWithType:UIButtonTypeCustom];
-        [self.view addSubview:_btn];
-        
-        _btn.frame = CGRectMake(15, 100, 345, 40);
-        [_btn.titleLabel setFont:[UIFont systemFontOfSize:12]];
-        [_btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
-        [_btn setTitle:@"First" forState:UIControlStateNormal];
-    }
-    return _btn;
+    [[YSSettingMgr shareInstance] changeTheme];
 }
 
 - (UIButton *)btn1
@@ -160,7 +143,7 @@
         [_btn2.titleLabel setFont:[UIFont systemFontOfSize:12]];
         [_btn2 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
         [_btn2 setTitle:@"语音交互" forState:UIControlStateNormal];
-        _btn1.tag = 2;
+        _btn2.tag = 2;
     }
     return _btn2;
 }

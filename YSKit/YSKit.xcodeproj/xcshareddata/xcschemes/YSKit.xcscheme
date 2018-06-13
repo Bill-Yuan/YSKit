@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C44EC5DF1FCBF2AC00839DF4"
-               BuildableName = "&#x96f6;&#x6563;Demo.app"
+               BuildableName = "&#x5927;&#x6742;&#x70e9;.app"
                BlueprintName = "YSKit"
                ReferencedContainer = "container:YSKit.xcodeproj">
             </BuildableReference>
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -34,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C44EC5DF1FCBF2AC00839DF4"
-            BuildableName = "&#x96f6;&#x6563;Demo.app"
+            BuildableName = "&#x5927;&#x6742;&#x70e9;.app"
             BlueprintName = "YSKit"
             ReferencedContainer = "container:YSKit.xcodeproj">
          </BuildableReference>
@@ -46,7 +45,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -58,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C44EC5DF1FCBF2AC00839DF4"
-            BuildableName = "&#x96f6;&#x6563;Demo.app"
+            BuildableName = "&#x5927;&#x6742;&#x70e9;.app"
             BlueprintName = "YSKit"
             ReferencedContainer = "container:YSKit.xcodeproj">
          </BuildableReference>
@@ -77,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C44EC5DF1FCBF2AC00839DF4"
-            BuildableName = "&#x96f6;&#x6563;Demo.app"
+            BuildableName = "&#x5927;&#x6742;&#x70e9;.app"
             BlueprintName = "YSKit"
             ReferencedContainer = "container:YSKit.xcodeproj">
          </BuildableReference>

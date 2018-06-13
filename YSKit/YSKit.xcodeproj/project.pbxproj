@@ -25,14 +25,13 @@
 		C49A70E720D0BE06004AA43C /* YSCenterDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70DD20D0BE06004AA43C /* YSCenterDetailVC.m */; };
 		C49A70E820D0BE06004AA43C /* YSLeftDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70DF20D0BE06004AA43C /* YSLeftDetailVC.m */; };
 		C49A70EB20D0BE0E004AA43C /* YSSettingMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70EA20D0BE0E004AA43C /* YSSettingMgr.m */; };
-		C49A70EF20D0BE1F004AA43C /* YSCusBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70EE20D0BE1F004AA43C /* YSCusBtn.m */; };
 		E24B403B1E0B77E538B966EE /* libPods-YSKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E6CBB3324961969B9D71A7 /* libPods-YSKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01CA8E74DA1E6CFD9C74CAA7 /* Pods-YSKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YSKit/Pods-YSKit.debug.xcconfig"; sourceTree = "<group>"; };
 		04E6CBB3324961969B9D71A7 /* libPods-YSKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YSKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C44EC5E01FCBF2AC00839DF4 /* 零散Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "零散Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C44EC5E01FCBF2AC00839DF4 /* 大杂烩.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "大杂烩.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44EC5E31FCBF2AC00839DF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C44EC5E41FCBF2AC00839DF4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C44EC5E61FCBF2AC00839DF4 /* YSSafeAryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSSafeAryVC.h; sourceTree = "<group>"; };
@@ -68,8 +67,6 @@
 		C49A70DF20D0BE06004AA43C /* YSLeftDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLeftDetailVC.m; sourceTree = "<group>"; };
 		C49A70E920D0BE0E004AA43C /* YSSettingMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSSettingMgr.h; sourceTree = "<group>"; };
 		C49A70EA20D0BE0E004AA43C /* YSSettingMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSSettingMgr.m; sourceTree = "<group>"; };
-		C49A70ED20D0BE1F004AA43C /* YSCusBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCusBtn.h; sourceTree = "<group>"; };
-		C49A70EE20D0BE1F004AA43C /* YSCusBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCusBtn.m; sourceTree = "<group>"; };
 		DD80703350434711BFD36C9A /* Pods-YSKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSKit/Pods-YSKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +95,7 @@
 		C44EC5E11FCBF2AC00839DF4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C44EC5E01FCBF2AC00839DF4 /* 零散Demo.app */,
+				C44EC5E01FCBF2AC00839DF4 /* 大杂烩.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,7 +109,6 @@
 				C4A68D9A20D0E81300334B9B /* 语音 */,
 				C4A68D9920D0E80000334B9B /* 线程安全 */,
 				C46354951FCD133600FD1602 /* Util */,
-				C49A70EC20D0BE1F004AA43C /* CusView */,
 				C49A70CB20D0BE06004AA43C /* TestCase */,
 				C49A70D020D0BE06004AA43C /* UIKit+Setting */,
 				C44EC5EC1FCBF2AC00839DF4 /* Assets.xcassets */,
@@ -182,15 +178,6 @@
 			path = "侧滑";
 			sourceTree = "<group>";
 		};
-		C49A70EC20D0BE1F004AA43C /* CusView */ = {
-			isa = PBXGroup;
-			children = (
-				C49A70ED20D0BE1F004AA43C /* YSCusBtn.h */,
-				C49A70EE20D0BE1F004AA43C /* YSCusBtn.m */,
-			);
-			path = CusView;
-			sourceTree = "<group>";
-		};
 		C4A68D9920D0E80000334B9B /* 线程安全 */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +227,7 @@
 			);
 			name = YSKit;
 			productName = YSKit;
-			productReference = C44EC5E01FCBF2AC00839DF4 /* 零散Demo.app */;
+			productReference = C44EC5E01FCBF2AC00839DF4 /* 大杂烩.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -350,7 +337,6 @@
 				C49A70E820D0BE06004AA43C /* YSLeftDetailVC.m in Sources */,
 				C49A70E520D0BE06004AA43C /* YSControlVC.m in Sources */,
 				C44EC5FE1FCBF86900839DF4 /* YSSpeechVC.m in Sources */,
-				C49A70EF20D0BE1F004AA43C /* YSCusBtn.m in Sources */,
 				C49A70E420D0BE06004AA43C /* YSLeftVC.m in Sources */,
 				C44EC5F31FCBF2AC00839DF4 /* main.m in Sources */,
 				C49A70E120D0BE06004AA43C /* YSFoundationCase.m in Sources */,
@@ -493,7 +479,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bob.com.YSKit;
-				PRODUCT_NAME = "零散Demo";
+				PRODUCT_NAME = "大杂烩";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -510,7 +496,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bob.com.YSKit;
-				PRODUCT_NAME = "零散Demo";
+				PRODUCT_NAME = "大杂烩";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
