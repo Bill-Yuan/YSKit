@@ -48,7 +48,7 @@
         make.height.mas_equalTo(40);
         make.width.mas_equalTo(width + 30);
         make.centerX.equalTo(self.mas_centerX);
-        make.bottom.equalTo(self).mas_offset(-KTabbarHeight);
+        make.bottom.equalTo(self).mas_offset(-KTabbarHeight -30);
     }];
     
     self.tip.text = _msg;
