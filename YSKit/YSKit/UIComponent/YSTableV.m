@@ -13,6 +13,7 @@
 #import "YSTableL.h"
 #import "MJRefresh.h"
 
+#import "YSUtils.h"
 
 @interface YSTableV ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -163,6 +164,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    kPreventRepeatClickTime(2.f);
+
     if(self.selectedRow){
         self.selectedRow(_dataSource[indexPath.row]);
     }

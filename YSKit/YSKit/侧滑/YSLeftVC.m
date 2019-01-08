@@ -109,15 +109,6 @@
         
         MJWeakSelf;
         _tableV.selectedRow = ^(id  _Nonnull data) {
-//            YSUserInfoM *model = (YSUserInfoM *)data;
-//            YSLeftDetailVC *detailVC = [[YSLeftDetailVC alloc] initWithIdx:model.userId];
-//            [weakSelf.navigationController pushViewController:detailVC animated:YES];
-            
-//            YSUserInfoM *model = (YSUserInfoM *)data;
-//            NSString *msg = [@"选中用户ID：" stringByAppendingFormat:@"%lu",(unsigned long)model.userId];
-//            YSToastV *toastV = [[YSToastV alloc] initWithMsg:msg hdnAfter:.5f];
-//            [toastV showAnimation];
-            
             [[UIApplication sharedApplication].keyWindow addSubview:weakSelf.actionSheetV];
         };
         
@@ -144,8 +135,9 @@
     YSActionHeadV *headV = [[YSActionHeadV alloc] initWithFrame:frame title:@"开仓成功" textData:@[@"持仓号",@"币种",@"开仓价",@"开仓数量"] detailData:@[@"#123",@"BTC/USD",@"3918.34",@"0.1"] closeBlock:^{
         [weakSelf.actionSheetV dismiss];
     }];
-    _actionSheetV = [[YSActionSheetV alloc] initWithTitleView:headV optionsArr:@[@"查看持仓",@"继续交易"] cancelTitle:@"" selectedBlock:^(NSInteger index) {
-        ;
+    _actionSheetV = [[YSActionSheetV alloc] initWithTitleView:headV optionsArr:@[@"查看持仓",@"继续交易"] cancelTitle:nil selectedBlock:^(NSInteger index) {
+        YSToastV *toastV = [[YSToastV alloc] initWithMsg:@"选中用户ID:123" hdnAfter:.5f];
+        [toastV showAnimation];
     } cancelBlock:^{
         ;
     }];
