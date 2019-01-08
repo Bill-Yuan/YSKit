@@ -7,12 +7,12 @@
 //
 
 #import "YSTableV.h"
+#import <Masonry.h>
 
 #import "YSCellM.h"
 #import "YSTableL.h"
 #import "MJRefresh.h"
 
-#import <Masonry.h>
 
 @interface YSTableV ()<UITableViewDelegate,UITableViewDataSource>
 

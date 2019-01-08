@@ -8,11 +8,6 @@
 
 #import "YSTableM.h"
 
-@implementation YSTableM
-
-@end
-
-
 @implementation YSUserInfoM
 
 @end

@@ -14,6 +14,9 @@
 #import "YSTableM.h"
 #import "YSToastV.h"
 
+#import "YSUtils.h"
+#import "YSActionHeadV.h"
+#import "YSActionSheetV.h"
 
 #define MJWeakSelf __weak typeof(self) weakSelf = self;
 
@@ -26,6 +29,9 @@
 @property (nonatomic, assign) NSUInteger curPage;
 
 @property (nonatomic, strong) NSMutableArray *dataArr;
+
+
+@property (nonatomic, strong) YSActionSheetV *actionSheetV;
 
 @end
 
@@ -107,10 +113,12 @@
 //            YSLeftDetailVC *detailVC = [[YSLeftDetailVC alloc] initWithIdx:model.userId];
 //            [weakSelf.navigationController pushViewController:detailVC animated:YES];
             
-            YSUserInfoM *model = (YSUserInfoM *)data;
-            NSString *msg = [@"选中用户ID：" stringByAppendingFormat:@"%lu",(unsigned long)model.userId];
-            YSToastV *toastV = [[YSToastV alloc] initWithMsg:msg hdnAfter:.5f];
-            [toastV showAnimation];
+//            YSUserInfoM *model = (YSUserInfoM *)data;
+//            NSString *msg = [@"选中用户ID：" stringByAppendingFormat:@"%lu",(unsigned long)model.userId];
+//            YSToastV *toastV = [[YSToastV alloc] initWithMsg:msg hdnAfter:.5f];
+//            [toastV showAnimation];
+            
+            [[UIApplication sharedApplication].keyWindow addSubview:weakSelf.actionSheetV];
         };
         
         _tableV.headerRefresh = ^{
@@ -126,4 +134,31 @@
     }
     return _tableV;
 }
+
+- (YSActionSheetV *)actionSheetV{
+    MJWeakSelf;
+    
+    CGFloat height = 60 + (4 - 2) * 32 + 36 * 2 + 12;
+    CGRect frame = CGRectMake( 0, 0, kScreenWidth, height);
+    
+    YSActionHeadV *headV = [[YSActionHeadV alloc] initWithFrame:frame title:@"开仓成功" textData:@[@"持仓号",@"币种",@"开仓价",@"开仓数量"] detailData:@[@"#123",@"BTC/USD",@"3918.34",@"0.1"] closeBlock:^{
+        [weakSelf.actionSheetV dismiss];
+    }];
+    _actionSheetV = [[YSActionSheetV alloc] initWithTitleView:headV optionsArr:@[@"查看持仓",@"继续交易"] cancelTitle:@"" selectedBlock:^(NSInteger index) {
+        ;
+    } cancelBlock:^{
+        ;
+    }];
+
+    return _actionSheetV;
+}
+
+
+
+
+
+
+
+
+
 @end

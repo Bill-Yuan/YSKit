@@ -10,12 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface YSTableM : NSObject
-
-@end
-
-
-
+#pragma mark --
+#pragma mark 用户信息数据模型
 @interface YSUserInfoM : NSObject
 
 @property (nonatomic, assign) NSUInteger userId;
