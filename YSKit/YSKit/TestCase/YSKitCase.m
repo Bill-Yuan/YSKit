@@ -62,4 +62,31 @@
     free(meths);
 }
 
++ (void)logScreenInfo:(UIViewController *)vc{
+    CGFloat navH = CGRectGetHeight(vc.navigationController.navigationBar.frame);
+    CGFloat statusH = CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
+    
+    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+    if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+        statusBar.backgroundColor = [UIColor redColor];
+    }
+    
+    vc.navigationController.navigationBar.backgroundColor = [UIColor yellowColor];
+    
+    vc.tabBarController.tabBar.backgroundColor = [UIColor redColor];
+    
+    CGFloat tabBarH = CGRectGetHeight(vc.tabBarController.tabBar.frame);
+    
+    UIEdgeInsets insets = UIEdgeInsetsZero;
+    if (@available(iOS 11.0, *)) {
+        insets = [UIApplication sharedApplication].keyWindow.safeAreaInsets;
+    } else {
+        // Fallback on earlier versions
+    }
+    
+    NSLog(@"---- %lf ---- %lf ---- %lf --- %@",navH,statusH,tabBarH,NSStringFromUIEdgeInsets(insets));
+    // iphoneX ---- 44.000000 ---- 44.000000 ---- 83.000000 ---- {44, 0, 34, 0}
+    // iphone6 ---- 44.000000 ---- 20.000000 ---- 49.000000 --- {20, 0, 0, 0}
+    // iphoneP ---- 44.000000 ---- 20.000000 ---- 49.000000 --- {20, 0, 0, 0}
+}
 @end

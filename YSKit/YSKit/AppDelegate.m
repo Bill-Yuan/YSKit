@@ -21,7 +21,10 @@
 
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [_window setBackgroundColor:[UIColor whiteColor]];
-    [_window setRootViewController:[YSControlVC new]];
+    
+    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    tabBar.viewControllers = @[[YSControlVC new]];
+    [_window setRootViewController:tabBar];
     [_window makeKeyAndVisible];
     
     return YES;

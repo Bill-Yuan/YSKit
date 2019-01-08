@@ -12,6 +12,8 @@
 
 #import "YSTableV.h"
 #import "YSTableM.h"
+#import "YSToastV.h"
+
 
 #define MJWeakSelf __weak typeof(self) weakSelf = self;
 
@@ -58,7 +60,6 @@
     _dataArr = [@[] mutableCopy];
     
     [self tableV];
-    
     [self loadMoreData];
 }
 
@@ -102,9 +103,14 @@
         
         MJWeakSelf;
         _tableV.selectedRow = ^(id  _Nonnull data) {
+//            YSUserInfoM *model = (YSUserInfoM *)data;
+//            YSLeftDetailVC *detailVC = [[YSLeftDetailVC alloc] initWithIdx:model.userId];
+//            [weakSelf.navigationController pushViewController:detailVC animated:YES];
+            
             YSUserInfoM *model = (YSUserInfoM *)data;
-            YSLeftDetailVC *detailVC = [[YSLeftDetailVC alloc] initWithIdx:model.userId];
-            [weakSelf.navigationController pushViewController:detailVC animated:YES];
+            NSString *msg = [@"选中用户ID：" stringByAppendingFormat:@"%lu",(unsigned long)model.userId];
+            YSToastV *toastV = [[YSToastV alloc] initWithMsg:msg hdnAfter:.5f];
+            [toastV showAnimation];
         };
         
         _tableV.headerRefresh = ^{
