@@ -9,13 +9,21 @@
 #import "YSLeftVC.h"
 #import "YSLeftDetailVC.h"
 
-@interface YSLeftVC ()
-<
-UITableViewDelegate,
-UITableViewDataSource
->
 
-@property (nonatomic, strong) UITableView *tableV;
+#import "YSTableV.h"
+#import "YSTableM.h"
+
+#define MJWeakSelf __weak typeof(self) weakSelf = self;
+
+@interface YSLeftVC ()
+
+@property (nonatomic, strong) YSTableV *tableV;
+
+@property (nonatomic, assign) NSUInteger pageCnt;
+
+@property (nonatomic, assign) NSUInteger curPage;
+
+@property (nonatomic, strong) NSMutableArray *dataArr;
 
 @end
 
@@ -25,16 +33,34 @@ UITableViewDataSource
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self makeNavTitle];
+    
+    [self makeContent];
+}
+
+- (void)makeNavTitle{
     self.view.backgroundColor = [UIColor lightGrayColor];
     self.title = @"侧边栏";
     self.navigationController.navigationBar.barTintColor =[UIColor redColor];
     
-    [self.tableV reloadData];
     
-    UIBarButtonItem *rightBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleDone target:self action:@selector(closeSlide)];
+    UIBarButtonItem *rightBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭"
+                                                                     style:UIBarButtonItemStyleDone
+                                                                    target:self
+                                                                    action:@selector(closeSlide)];
     self.navigationItem.rightBarButtonItem = rightBtnItem;
 }
 
+- (void)makeContent{
+    
+    _curPage = 1;
+    _pageCnt = 10;
+    _dataArr = [@[] mutableCopy];
+    
+    [self tableV];
+    
+    [self loadMoreData];
+}
 
 - (void)closeSlide
 {
@@ -43,39 +69,54 @@ UITableViewDataSource
     }
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 20;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSString *str = NSStringFromClass([UITableViewCell class]);
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                      reuseIdentifier:str];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    }
-    cell.textLabel.text = [@(indexPath.row) stringValue];
+- (void)loadMoreData{
     
-    return cell;
+    if (_curPage <= 1) {
+        [_dataArr removeAllObjects];
+        [_tableV resetData];
+    }
+    
+    NSMutableArray *result = [@[] mutableCopy];
+    for (int i = 1; i <= _pageCnt; i++) {
+        NSString *uId = [@(_dataArr.count + 1) stringValue];
+        
+        YSUserInfoM *model = [YSUserInfoM new];
+        model.userId = i;
+        model.nickName = uId;
+        model.signature = @"hello kitty";
+        
+        [result addObject:model];
+        [_dataArr addObject:model];
+    }
+    
+    [_tableV addObjectFromArray:result];
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    YSLeftDetailVC *detailVC = [[YSLeftDetailVC alloc] initWithIdx:(indexPath.row+1)];
-    [self.navigationController pushViewController:detailVC animated:YES];
-}
 
-- (UITableView *)tableV
-{
+- (YSTableV *)tableV{
     if (!_tableV) {
-        _tableV = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableV = [[YSTableV alloc] initWithFrame:self.view.bounds
+                                       dataSource:@[]
+                                         CellType:YSTypeUserInfo];
         [self.view addSubview:_tableV];
         
-        _tableV.delegate = self;
-        _tableV.dataSource = self;
+        MJWeakSelf;
+        _tableV.selectedRow = ^(id  _Nonnull data) {
+            YSUserInfoM *model = (YSUserInfoM *)data;
+            YSLeftDetailVC *detailVC = [[YSLeftDetailVC alloc] initWithIdx:model.userId];
+            [weakSelf.navigationController pushViewController:detailVC animated:YES];
+        };
+        
+        _tableV.headerRefresh = ^{
+            weakSelf.curPage = 1;
+            [weakSelf loadMoreData];
+        };
+        
+        _tableV.footerRefresh = ^{
+            weakSelf.curPage++;
+            [weakSelf loadMoreData];
+        };
+        
     }
     return _tableV;
 }

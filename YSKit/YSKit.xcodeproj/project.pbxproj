@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4129CAF21E46DFF00DAFC48 /* YSTableV.m in Sources */ = {isa = PBXBuildFile; fileRef = C4129CAE21E46DFF00DAFC48 /* YSTableV.m */; };
+		C4129CB221E46F8700DAFC48 /* YSTableM.m in Sources */ = {isa = PBXBuildFile; fileRef = C4129CB121E46F8700DAFC48 /* YSTableM.m */; };
+		C4129CB821E4746700DAFC48 /* YSCellM.m in Sources */ = {isa = PBXBuildFile; fileRef = C4129CB721E4746700DAFC48 /* YSCellM.m */; };
+		C4129CBB21E4755400DAFC48 /* YSTableL.m in Sources */ = {isa = PBXBuildFile; fileRef = C4129CBA21E4755400DAFC48 /* YSTableL.m */; };
 		C44EC5E51FCBF2AC00839DF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5E41FCBF2AC00839DF4 /* AppDelegate.m */; };
 		C44EC5E81FCBF2AC00839DF4 /* YSSafeAryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5E71FCBF2AC00839DF4 /* YSSafeAryVC.m */; };
 		C44EC5ED1FCBF2AC00839DF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44EC5EC1FCBF2AC00839DF4 /* Assets.xcassets */; };
@@ -31,6 +35,14 @@
 /* Begin PBXFileReference section */
 		01CA8E74DA1E6CFD9C74CAA7 /* Pods-YSKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YSKit/Pods-YSKit.debug.xcconfig"; sourceTree = "<group>"; };
 		04E6CBB3324961969B9D71A7 /* libPods-YSKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YSKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4129CAD21E46DFF00DAFC48 /* YSTableV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSTableV.h; sourceTree = "<group>"; };
+		C4129CAE21E46DFF00DAFC48 /* YSTableV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSTableV.m; sourceTree = "<group>"; };
+		C4129CB021E46F8700DAFC48 /* YSTableM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSTableM.h; sourceTree = "<group>"; };
+		C4129CB121E46F8700DAFC48 /* YSTableM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSTableM.m; sourceTree = "<group>"; };
+		C4129CB621E4746700DAFC48 /* YSCellM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSCellM.h; sourceTree = "<group>"; };
+		C4129CB721E4746700DAFC48 /* YSCellM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSCellM.m; sourceTree = "<group>"; };
+		C4129CB921E4755400DAFC48 /* YSTableL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSTableL.h; sourceTree = "<group>"; };
+		C4129CBA21E4755400DAFC48 /* YSTableL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSTableL.m; sourceTree = "<group>"; };
 		C44EC5E01FCBF2AC00839DF4 /* 大杂烩.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "大杂烩.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44EC5E31FCBF2AC00839DF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C44EC5E41FCBF2AC00839DF4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +94,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4129CA921E46DB600DAFC48 /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				C4129CAD21E46DFF00DAFC48 /* YSTableV.h */,
+				C4129CAE21E46DFF00DAFC48 /* YSTableV.m */,
+				C4129CB021E46F8700DAFC48 /* YSTableM.h */,
+				C4129CB121E46F8700DAFC48 /* YSTableM.m */,
+				C4129CB621E4746700DAFC48 /* YSCellM.h */,
+				C4129CB721E4746700DAFC48 /* YSCellM.m */,
+				C4129CB921E4755400DAFC48 /* YSTableL.h */,
+				C4129CBA21E4755400DAFC48 /* YSTableL.m */,
+			);
+			path = UIComponent;
+			sourceTree = "<group>";
+		};
 		C44EC5D71FCBF2AB00839DF4 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +132,7 @@
 			children = (
 				C44EC5E31FCBF2AC00839DF4 /* AppDelegate.h */,
 				C44EC5E41FCBF2AC00839DF4 /* AppDelegate.m */,
+				C4129CA921E46DB600DAFC48 /* UIComponent */,
 				C49A70D520D0BE06004AA43C /* 侧滑 */,
 				C4A68D9A20D0E81300334B9B /* 语音 */,
 				C4A68D9920D0E80000334B9B /* 线程安全 */,
@@ -218,7 +246,6 @@
 				C44EC5DC1FCBF2AC00839DF4 /* Sources */,
 				C44EC5DD1FCBF2AC00839DF4 /* Frameworks */,
 				C44EC5DE1FCBF2AC00839DF4 /* Resources */,
-				ED3EF9E37872AB392AE16D3E /* [CP] Embed Pods Frameworks */,
 				49D6AA0B4C3B9D0D6FAB51A0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -300,28 +327,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YSKit/Pods-YSKit-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YSKit/Pods-YSKit-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ED3EF9E37872AB392AE16D3E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YSKit/Pods-YSKit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -339,12 +354,16 @@
 				C44EC5FE1FCBF86900839DF4 /* YSSpeechVC.m in Sources */,
 				C49A70E420D0BE06004AA43C /* YSLeftVC.m in Sources */,
 				C44EC5F31FCBF2AC00839DF4 /* main.m in Sources */,
+				C4129CAF21E46DFF00DAFC48 /* YSTableV.m in Sources */,
 				C49A70E120D0BE06004AA43C /* YSFoundationCase.m in Sources */,
+				C4129CB221E46F8700DAFC48 /* YSTableM.m in Sources */,
 				C49A70EB20D0BE0E004AA43C /* YSSettingMgr.m in Sources */,
 				C49A70E620D0BE06004AA43C /* YSCenterVC.m in Sources */,
 				C49A70E320D0BE06004AA43C /* UIViewController+Setting.m in Sources */,
 				C49A70E020D0BE06004AA43C /* YSKitCase.m in Sources */,
+				C4129CB821E4746700DAFC48 /* YSCellM.m in Sources */,
 				C49A70E220D0BE06004AA43C /* UIButton+Setting.m in Sources */,
+				C4129CBB21E4755400DAFC48 /* YSTableL.m in Sources */,
 				C44EC5E51FCBF2AC00839DF4 /* AppDelegate.m in Sources */,
 				C44EC5FB1FCBF2E100839DF4 /* GesCell.m in Sources */,
 			);
