@@ -61,6 +61,8 @@
     }];
 }
 
+#pragma mark --
+#pragma mark animation method
 - (void)showAnimation{
     [UIView animateWithDuration:.4f animations:^{
         self.alpha = 1.f;

@@ -10,6 +10,7 @@
 
 @interface YSLeftVC : UIViewController
 
+//点击关闭按钮回调
 @property (nonatomic, copy) void(^closeBlk)(void);
 
 @end

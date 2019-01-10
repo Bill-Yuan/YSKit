@@ -12,8 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YSTableL : NSObject
 
+//类名
 @property (nonatomic, copy) NSString *cellName;
 
+//行高
 @property (nonatomic, assign) double cellHeight;
 
 @end

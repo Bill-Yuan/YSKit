@@ -111,7 +111,7 @@
         
     
         MJWeakSelf;
-        _tableV.selectedRow = ^(id  _Nonnull data) {
+        _tableV.selectedRow = ^(NSUInteger row,id  _Nonnull data) {
             [[UIApplication sharedApplication].keyWindow addSubview:weakSelf.actionSheetV];
         };
         

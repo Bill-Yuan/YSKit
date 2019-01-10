@@ -14,12 +14,16 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark 用户信息数据模型
 @interface YSUserInfoM : NSObject
 
+//用户Id
 @property (nonatomic, assign) NSUInteger userId;
 
+//用户头像
 @property (nonatomic, copy) NSString *avator;
 
+//用户昵称
 @property (nonatomic, copy) NSString *nickName;
 
+//用户签名
 @property (nonatomic, copy) NSString *signature;
 
 @end

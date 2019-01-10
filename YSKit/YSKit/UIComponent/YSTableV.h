@@ -20,7 +20,7 @@ typedef enum : NSUInteger {
 @interface YSTableV : UIView
 
 //选中某行回调
-@property (nonatomic, copy) void(^selectedRow)(id data);
+@property (nonatomic, copy) void(^selectedRow)(NSUInteger row,id data);
 
 //重复点击获取数据
 @property (nonatomic, copy) void(^reClickData)(void);

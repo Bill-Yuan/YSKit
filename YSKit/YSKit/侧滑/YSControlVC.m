@@ -28,11 +28,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Left";
+    self.title = @"";
     [self addView];
 }
 
 - (void)addView{
+    
 //添加中间
     _centerVC = [YSCenterVC new];
     [_centerVC setDay:THEME_DAY Night:THEME_NIGHT];
@@ -57,10 +58,6 @@
     UINavigationController *leftNav = [[UINavigationController alloc] initWithRootViewController:_leftVC];
     [self addChildViewController:leftNav];
     [self.view addSubview:leftNav.view];
-    
-    leftNav.view.layer.shadowRadius = 5;
-    leftNav.view.layer.shadowOpacity = 0.8;
-    leftNav.view.layer.shadowColor = [UIColor blackColor].CGColor;
  
     _leftVC.closeBlk = ^{
         [UIView animateWithDuration:.5f animations:^{

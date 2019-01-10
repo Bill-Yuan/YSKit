@@ -171,7 +171,8 @@
     kPreventRepeatClickTime(2.f);
 
     if(self.selectedRow){
-        self.selectedRow(_dataSource[indexPath.row]);
+        NSUInteger row = indexPath.row;
+        self.selectedRow(row, _dataSource[row]);
     }
 }
 

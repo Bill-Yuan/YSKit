@@ -13,6 +13,7 @@
 
 @interface YSSettingMgr : NSObject
 
+//设置主题
 @property (nonatomic, assign) BOOL isDay;
 
 + (instancetype)shareInstance;
