@@ -9,10 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIViewController (Setting)
-
-@property (nonatomic, strong) UIColor *dayColor;
-@property (nonatomic, strong) UIColor *nightColor;
-
+ 
 - (void)setDay:(UIColor *)dColor Night:(UIColor *)nColor;
 
 @end

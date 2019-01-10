@@ -10,12 +10,6 @@
  
 @interface UIButton (Setting)
 
-@property (nonatomic, strong) UIColor *dayColor;
-@property (nonatomic, strong) UIColor *nightColor;
-
-@property (nonatomic, strong) UIColor *txtDColor;
-@property (nonatomic, strong) UIColor *txtNColor;
-
 - (void)setDay:(UIColor *)bgColor TxtColor:(UIColor *)tColor;
 - (void)setNight:(UIColor *)bgColor TxtColor:(UIColor *)tColor;
 

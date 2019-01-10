@@ -31,6 +31,8 @@
 		C49A70E720D0BE06004AA43C /* YSCenterDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70DD20D0BE06004AA43C /* YSCenterDetailVC.m */; };
 		C49A70E820D0BE06004AA43C /* YSLeftDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70DF20D0BE06004AA43C /* YSLeftDetailVC.m */; };
 		C49A70EB20D0BE0E004AA43C /* YSSettingMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70EA20D0BE0E004AA43C /* YSSettingMgr.m */; };
+		C4A0D6DD21E717FE00A21143 /* UILabel+Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0D6DC21E717FE00A21143 /* UILabel+Setting.m */; };
+		C4A0D6E021E71F2100A21143 /* UITableView+Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0D6DF21E71F2100A21143 /* UITableView+Setting.m */; };
 		C4BB925F21E4A958000BA387 /* YSToastV.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BB925E21E4A958000BA387 /* YSToastV.m */; };
 		C4BB926221E4A9B6000BA387 /* YSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BB926121E4A9B6000BA387 /* YSUtils.m */; };
 		E24B403B1E0B77E538B966EE /* libPods-YSKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E6CBB3324961969B9D71A7 /* libPods-YSKit.a */; };
@@ -87,6 +89,10 @@
 		C49A70DF20D0BE06004AA43C /* YSLeftDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLeftDetailVC.m; sourceTree = "<group>"; };
 		C49A70E920D0BE0E004AA43C /* YSSettingMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSSettingMgr.h; sourceTree = "<group>"; };
 		C49A70EA20D0BE0E004AA43C /* YSSettingMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSSettingMgr.m; sourceTree = "<group>"; };
+		C4A0D6DB21E717FE00A21143 /* UILabel+Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Setting.h"; sourceTree = "<group>"; };
+		C4A0D6DC21E717FE00A21143 /* UILabel+Setting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Setting.m"; sourceTree = "<group>"; };
+		C4A0D6DE21E71F2100A21143 /* UITableView+Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Setting.h"; sourceTree = "<group>"; };
+		C4A0D6DF21E71F2100A21143 /* UITableView+Setting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Setting.m"; sourceTree = "<group>"; };
 		C4BB925D21E4A958000BA387 /* YSToastV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSToastV.h; sourceTree = "<group>"; };
 		C4BB925E21E4A958000BA387 /* YSToastV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSToastV.m; sourceTree = "<group>"; };
 		C4BB926021E4A9B6000BA387 /* YSUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSUtils.h; sourceTree = "<group>"; };
@@ -211,6 +217,10 @@
 				C49A70D320D0BE06004AA43C /* UIButton+Setting.m */,
 				C49A70D220D0BE06004AA43C /* UIViewController+Setting.h */,
 				C49A70D420D0BE06004AA43C /* UIViewController+Setting.m */,
+				C4A0D6DB21E717FE00A21143 /* UILabel+Setting.h */,
+				C4A0D6DC21E717FE00A21143 /* UILabel+Setting.m */,
+				C4A0D6DE21E71F2100A21143 /* UITableView+Setting.h */,
+				C4A0D6DF21E71F2100A21143 /* UITableView+Setting.m */,
 			);
 			path = "UIKit+Setting";
 			sourceTree = "<group>";
@@ -376,6 +386,7 @@
 			files = (
 				C49A70E720D0BE06004AA43C /* YSCenterDetailVC.m in Sources */,
 				C463549B1FCD137600FD1602 /* YSTSArray.m in Sources */,
+				C4A0D6E021E71F2100A21143 /* UITableView+Setting.m in Sources */,
 				C44EC5E81FCBF2AC00839DF4 /* YSSafeAryVC.m in Sources */,
 				043772AD21E4D7EB0030E838 /* YSActionSheetV.m in Sources */,
 				C49A70E820D0BE06004AA43C /* YSLeftDetailVC.m in Sources */,
@@ -387,6 +398,7 @@
 				043772AC21E4D7EB0030E838 /* YSActionHeadV.m in Sources */,
 				C4BB926221E4A9B6000BA387 /* YSUtils.m in Sources */,
 				C49A70E120D0BE06004AA43C /* YSFoundationCase.m in Sources */,
+				C4A0D6DD21E717FE00A21143 /* UILabel+Setting.m in Sources */,
 				C4129CB221E46F8700DAFC48 /* YSTableM.m in Sources */,
 				C49A70EB20D0BE0E004AA43C /* YSSettingMgr.m in Sources */,
 				C49A70E620D0BE06004AA43C /* YSCenterVC.m in Sources */,
