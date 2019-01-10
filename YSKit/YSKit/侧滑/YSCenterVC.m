@@ -13,6 +13,7 @@
 
 #import "YSSettingMgr.h"
 
+#import "YSMarco.h"
 #import "UIButton+Setting.h"
 #import "UIViewController+Setting.h"
 
@@ -25,7 +26,6 @@
 @property (nonatomic, strong) UIButton *btn1;
 @property (nonatomic, strong) UIButton *btn2;
 @property (nonatomic, strong) UIButton *btn3;
-@property (nonatomic, strong) UIButton *btn4;
 
 @end
 
@@ -54,75 +54,76 @@
 
 - (void)s_viewDidLoad{
     NSLog(@"替换的方法");
-    self.view.backgroundColor = [UIColor blackColor];
     [self s_viewDidLoad];
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    [self settingMethod];
-    [self initControl];
+    [self createView];
+    [self createNavTitle];
+
+    [self setBtnTitle];
 }
 
-- (void)settingMethod
-{
+- (void)createNavTitle{
     self.title = @"主页";
-    self.navigationController.navigationBar.barTintColor =[UIColor yellowColor];
-    self.view.backgroundColor = [UIColor grayColor];
-    
     UIBarButtonItem *leftBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"打开" style:UIBarButtonItemStyleDone target:self action:@selector(openSlide)];
     self.navigationItem.leftBarButtonItem = leftBtnItem;
 }
 
-- (void)initControl
-{
-    [self.btn1 setDay:[UIColor grayColor] TxtColor:[UIColor blackColor]];
-    [self.btn1 setNight:[UIColor blackColor] TxtColor:[UIColor whiteColor]];
+- (void)createView{
+    [self setDay:THEME_DAY Night:THEME_NIGHT];
     
-    [self.btn2 setDay:[UIColor blackColor] TxtColor:[UIColor whiteColor]];
-    [self.btn2 setNight:[UIColor grayColor] TxtColor:[UIColor blackColor]];
-    
-    [self.btn3 setDay:[UIColor grayColor] TxtColor:[UIColor blackColor]];
-    [self.btn3 setNight:[UIColor blackColor] TxtColor:[UIColor whiteColor]];
-    
-    [self.btn4 setDay:[UIColor brownColor] TxtColor:[UIColor whiteColor]];
-    [self.btn4 setNight:[UIColor purpleColor] TxtColor:[UIColor greenColor]];
-    
-    [self setDay:[UIColor blueColor] Night:[UIColor lightGrayColor]];
+    [self btn1];
+    [self btn2];
+    [self btn3];
 }
 
-- (void)openSlide
-{
+
+- (void)setBtnTitle{
+    NSString *title = [YSSettingMgr shareInstance].isDay ? @"切换夜间" : @"切换日间";
+    [self.btn3 setTitle:title forState:UIControlStateNormal];
+}
+
+- (void)openSlide{
     if(self.openBlk){
         self.openBlk();
     }
 }
 
-- (void)btnAction:(UIButton *)sender
-{
-    NSLog(@"=======%d======",sender.tag);
+- (void)btnAction:(UIButton *)sender{
+    UIViewController *desVC = nil;
     switch (sender.tag) {
         case 1:{
-            [self.navigationController pushViewController:[YSSafeAryVC new] animated:YES];
+            desVC = [YSSafeAryVC new];
+  
         }
             break;
         case 2:{
-            [self.navigationController pushViewController:[YSSpeechVC new] animated:YES];
+            desVC = [YSSpeechVC new];
         }
             break;
         default:
             break;
     }
-    [[YSSettingMgr shareInstance] changeTheme];
+    
+    if (desVC) {
+        [self.navigationController pushViewController:desVC animated:YES];
+    }else{
+        [[YSSettingMgr shareInstance] changeTheme];
+        [self setBtnTitle];
+    }
 }
 
-- (UIButton *)btn1
-{
+- (UIButton *)btn1{
     if (!_btn1) {
         _btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.view addSubview:_btn1];
+        
+        [_btn1 setDay:UIBUTTON_DAY TxtColor:UIBUTTON_NIGHT];
+        [_btn1 setNight:UILABEL_DAY TxtColor:UILABEL_NIGHT];
         
         _btn1.frame = CGRectMake(15, 150, 345, 40);
         [_btn1.titleLabel setFont:[UIFont systemFontOfSize:12]];
@@ -133,12 +134,14 @@
     return _btn1;
 }
 
-- (UIButton *)btn2
-{
+- (UIButton *)btn2{
     if (!_btn2) {
         _btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.view addSubview:_btn2];
         
+        [_btn2 setDay:UIBUTTON_DAY TxtColor:UIBUTTON_NIGHT];
+        [_btn2 setNight:UILABEL_DAY TxtColor:UILABEL_NIGHT];
+
         _btn2.frame = CGRectMake(15, 200, 345, 40);
         [_btn2.titleLabel setFont:[UIFont systemFontOfSize:12]];
         [_btn2 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -148,31 +151,20 @@
     return _btn2;
 }
 
-- (UIButton *)btn3
-{
+- (UIButton *)btn3{
     if (!_btn3) {
         _btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.view addSubview:_btn3];
         
+        [_btn3 setDay:UIBUTTON_DAY TxtColor:UIBUTTON_NIGHT];
+        [_btn3 setNight:UILABEL_DAY TxtColor:UILABEL_NIGHT];
+
         _btn3.frame = CGRectMake(15, 250, 345, 40);
         [_btn3.titleLabel setFont:[UIFont systemFontOfSize:12]];
         [_btn3 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
-        [_btn3 setTitle:@"Forth" forState:UIControlStateNormal];
     }
     return _btn3;
 }
 
-- (UIButton *)btn4
-{
-    if (!_btn4) {
-        _btn4 = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.view addSubview:_btn4];
-        
-        _btn4.frame = CGRectMake(15, 300, 345, 40);
-        [_btn4.titleLabel setFont:[UIFont systemFontOfSize:12]];
-        [_btn4 addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
-        [_btn4 setTitle:@"Fifth" forState:UIControlStateNormal];
-    }
-    return _btn4;
-}
+
 @end

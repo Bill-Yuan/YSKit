@@ -18,6 +18,10 @@
 #import "YSActionHeadV.h"
 #import "YSActionSheetV.h"
 
+
+#import "YSMarco.h"
+#import "UIViewController+Setting.h"
+
 #define MJWeakSelf __weak typeof(self) weakSelf = self;
 
 @interface YSLeftVC ()
@@ -47,16 +51,14 @@
 }
 
 - (void)makeNavTitle{
-    self.view.backgroundColor = [UIColor lightGrayColor];
     self.title = @"侧边栏";
-    self.navigationController.navigationBar.barTintColor =[UIColor redColor];
-    
-    
     UIBarButtonItem *rightBtnItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭"
                                                                      style:UIBarButtonItemStyleDone
                                                                     target:self
                                                                     action:@selector(closeSlide)];
     self.navigationItem.rightBarButtonItem = rightBtnItem;
+    
+    [self setDay:THEME_DAY Night:THEME_NIGHT];
 }
 
 - (void)makeContent{

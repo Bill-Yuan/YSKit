@@ -50,11 +50,12 @@
 
 - (void)dayTheme{
     self.view.backgroundColor = self.dayColor;
-    self.navigationController.nav
+    self.navigationController.navigationBar.barTintColor = self.dayColor;
 }
 
 - (void)nightTheme{
     self.view.backgroundColor = self.nightColor;
+    self.navigationController.navigationBar.barTintColor = self.nightColor;
 }
 
 #pragma mark --
