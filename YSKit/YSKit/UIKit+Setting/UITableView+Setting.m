@@ -51,10 +51,12 @@
 
 - (void)dayTheme{
     self.backgroundColor = self.dayColor;
+    [self reloadData];
 }
 
 - (void)nightTheme{
     self.backgroundColor = self.nightColor;
+    [self reloadData];
 }
 
 #pragma mark --

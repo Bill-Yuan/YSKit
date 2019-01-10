@@ -93,6 +93,7 @@
 		C4A0D6DC21E717FE00A21143 /* UILabel+Setting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Setting.m"; sourceTree = "<group>"; };
 		C4A0D6DE21E71F2100A21143 /* UITableView+Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Setting.h"; sourceTree = "<group>"; };
 		C4A0D6DF21E71F2100A21143 /* UITableView+Setting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Setting.m"; sourceTree = "<group>"; };
+		C4A0D6E421E7291200A21143 /* YSMarco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSMarco.h; sourceTree = "<group>"; };
 		C4BB925D21E4A958000BA387 /* YSToastV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSToastV.h; sourceTree = "<group>"; };
 		C4BB925E21E4A958000BA387 /* YSToastV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSToastV.m; sourceTree = "<group>"; };
 		C4BB926021E4A9B6000BA387 /* YSUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSUtils.h; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 				C44EC5EC1FCBF2AC00839DF4 /* Assets.xcassets */,
 				C44EC5EE1FCBF2AC00839DF4 /* LaunchScreen.storyboard */,
 				C44EC5F11FCBF2AC00839DF4 /* Info.plist */,
+				C4A0D6E421E7291200A21143 /* YSMarco.h */,
 				C44EC5F21FCBF2AC00839DF4 /* main.m */,
 			);
 			path = YSKit;

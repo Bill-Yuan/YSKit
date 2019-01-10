@@ -14,6 +14,8 @@
 #import "MJRefresh.h"
 
 #import "YSUtils.h"
+#import "YSMarco.h"
+#import "UITableView+Setting.h"
 
 @interface YSTableV ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -177,11 +179,14 @@
 #pragma mark init
 - (UITableView *)tableV{
     if (!_tableV) {
-        _tableV = [[UITableView alloc] initWithFrame:self.bounds style:UITableViewStylePlain];
+        _tableV = [[UITableView alloc] initWithFrame:self.bounds
+                                               style:UITableViewStylePlain];
         [self addSubview:_tableV];
         
         _tableV.delegate = self;
         _tableV.dataSource = self;
+        
+        [_tableV setDay:TABLE_DAY Night:TABLE_NIGHT];
     }
     return _tableV;
 }

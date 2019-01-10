@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UILabel (Setting)
 
+- (void)setDay:(UIColor *)dColor Night:(UIColor *)nColor;
+
 @end
 
 NS_ASSUME_NONNULL_END

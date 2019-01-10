@@ -107,6 +107,7 @@
                                          CellType:YSTypeUserInfo];
         [self.view addSubview:_tableV];
         
+    
         MJWeakSelf;
         _tableV.selectedRow = ^(id  _Nonnull data) {
             [[UIApplication sharedApplication].keyWindow addSubview:weakSelf.actionSheetV];

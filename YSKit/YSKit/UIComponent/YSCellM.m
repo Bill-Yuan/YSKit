@@ -10,6 +10,9 @@
 #import "YSTableM.h"
 #import <Masonry.h>
 
+#import "YSMarco.h"
+#import "UILabel+Setting.h"
+
 @interface YSUserInfoCell ()
 
 @property (nonatomic, strong) UILabel *nickLbl;
@@ -25,7 +28,7 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -61,7 +64,7 @@
         _nickLbl = [UILabel new];
         [self.contentView addSubview:_nickLbl];
         
-        _nickLbl.textColor = [UIColor blackColor];
+        [_nickLbl setDay:UILABEL_DAY Night:UILABEL_NIGHT];
         _nickLbl.font = [UIFont boldSystemFontOfSize:16];
 
         [_nickLbl mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -78,7 +81,7 @@
         _signLbl = [UILabel new];
         [self.contentView addSubview:_signLbl];
         
-        _signLbl.textColor = [UIColor blackColor];
+        [_signLbl setDay:UILABEL_DAY Night:UILABEL_NIGHT];
         _signLbl.font = [UIFont boldSystemFontOfSize:16];
         
         [_signLbl mas_makeConstraints:^(MASConstraintMaker *make) {

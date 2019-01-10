@@ -66,6 +66,7 @@ typedef enum : NSUInteger {
  */
 - (id)initWithFrame:(CGRect)frame dataSource:(NSArray *)data CellType:(YSTableType)type;
 
+
 @end
 
 NS_ASSUME_NONNULL_END

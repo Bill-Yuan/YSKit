@@ -50,6 +50,7 @@
 
 - (void)dayTheme{
     self.view.backgroundColor = self.dayColor;
+    self.navigationController.nav
 }
 
 - (void)nightTheme{
