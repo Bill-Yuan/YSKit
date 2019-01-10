@@ -166,9 +166,9 @@
 				C44EC5E31FCBF2AC00839DF4 /* AppDelegate.h */,
 				C44EC5E41FCBF2AC00839DF4 /* AppDelegate.m */,
 				C4129CA921E46DB600DAFC48 /* UIComponent */,
-				C49A70D520D0BE06004AA43C /* 侧滑 */,
-				C4A68D9A20D0E81300334B9B /* 语音 */,
-				C4A68D9920D0E80000334B9B /* 线程安全 */,
+				C49A70D520D0BE06004AA43C /* slide */,
+				C4A68D9A20D0E81300334B9B /* voice */,
+				C4A68D9920D0E80000334B9B /* threadSafe */,
 				C46354951FCD133600FD1602 /* Util */,
 				C49A70CB20D0BE06004AA43C /* TestCase */,
 				C49A70D020D0BE06004AA43C /* UIKit+Setting */,
@@ -227,7 +227,7 @@
 			path = "UIKit+Setting";
 			sourceTree = "<group>";
 		};
-		C49A70D520D0BE06004AA43C /* 侧滑 */ = {
+		C49A70D520D0BE06004AA43C /* slide */ = {
 			isa = PBXGroup;
 			children = (
 				C49A70E920D0BE0E004AA43C /* YSSettingMgr.h */,
@@ -243,10 +243,10 @@
 				C49A70D920D0BE06004AA43C /* YSCenterDetailVC.h */,
 				C49A70DD20D0BE06004AA43C /* YSCenterDetailVC.m */,
 			);
-			path = "侧滑";
+			path = slide;
 			sourceTree = "<group>";
 		};
-		C4A68D9920D0E80000334B9B /* 线程安全 */ = {
+		C4A68D9920D0E80000334B9B /* threadSafe */ = {
 			isa = PBXGroup;
 			children = (
 				C44EC5E61FCBF2AC00839DF4 /* YSSafeAryVC.h */,
@@ -254,16 +254,16 @@
 				C44EC5F91FCBF2E100839DF4 /* GesCell.h */,
 				C44EC5FA1FCBF2E100839DF4 /* GesCell.m */,
 			);
-			path = "线程安全";
+			path = threadSafe;
 			sourceTree = "<group>";
 		};
-		C4A68D9A20D0E81300334B9B /* 语音 */ = {
+		C4A68D9A20D0E81300334B9B /* voice */ = {
 			isa = PBXGroup;
 			children = (
 				C44EC5FC1FCBF86900839DF4 /* YSSpeechVC.h */,
 				C44EC5FD1FCBF86900839DF4 /* YSSpeechVC.m */,
 			);
-			path = "语音";
+			path = voice;
 			sourceTree = "<group>";
 		};
 		FBF3F13DCED28139ACCCF2F4 /* Pods */ = {
