@@ -48,6 +48,30 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)snapShot:(UIView *)view successBlock:(nullable void(^)(UIImage * _Nullable image,NSData * _Nullable imagedata))block;
 
+
+/**
+ 给视图添加边框
+ 
+ @param view 要添加边框的视图
+ @param width 边框厚度
+ @param color 边框颜色
+ */
++ (void)borderInView:(UIView *)view
+               width:(CGFloat)width
+               color:(UIColor *)color;
+
+
+/**
+ 给视图添加阴影
+
+ @param view 要添加阴影的视图
+ @param size 阴影size
+ @param color 阴影颜色
+ */
++ (void)shdowInView:(UIView *)view
+             offset:(CGSize)size
+              color:(UIColor *)color;
+
 @end
 
 NS_ASSUME_NONNULL_END

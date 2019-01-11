@@ -80,4 +80,21 @@
     block(newImage,data);
 }
 
++ (void)borderInView:(UIView *)view
+               width:(CGFloat)width
+               color:(UIColor *)color
+{
+    view.layer.borderWidth = width;
+    view.layer.borderColor = color.CGColor;
+}
+
+
++ (void)shdowInView:(UIView *)view
+             offset:(CGSize)size
+              color:(UIColor *)color
+{
+    view.layer.shadowOffset = size;
+    view.layer.shadowOpacity = YES;
+    view.layer.shadowColor = color.CGColor;
+}
 @end

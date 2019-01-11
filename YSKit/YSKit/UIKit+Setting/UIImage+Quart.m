@@ -4,13 +4,13 @@
 //
 //  Created by Bob on 2019/1/11.
 //  Copyright © 2019 YS. All rights reserved.
-//
+//  
 
 #import "UIImage+Quart.h"
 
 @implementation UIImage (Quart)
 
-#warning on-screen-rendering/off-screen-rendering
+#warning 需要深入总结的主题on-screen-rendering/off-screen-rendering
 - (UIImage *)imageWithCornerRadius:(CGFloat)radius{
     
     CGRect rect = (CGRect){0.f, 0.f, self.size};

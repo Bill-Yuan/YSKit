@@ -142,7 +142,6 @@ NSParagraphStyleAttributeName     设置文本段落排版，为NSParagraphStyle
     if (!_tipBtn) {
         _tipBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.contentView addSubview:_tipBtn];
-        _tipBtn.backgroundColor = [UIColor lightGrayColor];
 
         [_tipBtn addTarget:self
                     action:@selector(responeToBtn)
@@ -153,6 +152,15 @@ NSParagraphStyleAttributeName     设置文本段落排版，为NSParagraphStyle
             make.centerY.mas_equalTo(self.contentView.mas_centerY);
             make.width.height.mas_equalTo(40);
         }];
+        
+        
+        [YSKitUtils borderInView:_tipBtn
+                           width:1
+                           color:[UIColor greenColor]];
+        
+        [YSKitUtils shdowInView:_tipBtn
+                         offset:CGSizeMake(3, 3)
+                          color:[UIColor yellowColor]];
     }
     return _tipBtn;
 }
