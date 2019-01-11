@@ -17,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) YSUserInfoM *model;
 
+@property (nonatomic, copy) void(^clickSnap)(NSUInteger row);
+
+
 @end
 
 NS_ASSUME_NONNULL_END

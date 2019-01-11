@@ -168,12 +168,12 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    kPreventRepeatClickTime(2.f);
-
-    if(self.selectedRow){
-        NSUInteger row = indexPath.row;
-        self.selectedRow(row, _dataSource[row]);
-    }
+//    kPreventRepeatClickTime(2.f);
+//
+//    if(self.selectedRow){
+//        NSUInteger row = indexPath.row;
+//        self.selectedRow(row, _dataSource[row]);
+//    }
 }
 
 #pragma mark --
