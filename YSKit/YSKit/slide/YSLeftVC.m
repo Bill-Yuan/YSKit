@@ -106,7 +106,7 @@
     if (!_tableV) {
         _tableV = [[YSTableV alloc] initWithFrame:self.view.bounds
                                        dataSource:@[]
-                                         CellType:YSTypeUserInfo];
+                                         cellType:YSTypeUserInfo];
         [self.view addSubview:_tableV];
         
     

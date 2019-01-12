@@ -17,6 +17,8 @@
 		C44EC5FB1FCBF2E100839DF4 /* GesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5FA1FCBF2E100839DF4 /* GesCell.m */; };
 		C44EC5FE1FCBF86900839DF4 /* YSSpeechVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5FD1FCBF86900839DF4 /* YSSpeechVC.m */; };
 		C463549B1FCD137600FD1602 /* YSTSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C463549A1FCD137600FD1602 /* YSTSArray.m */; };
+		C48FDD5821E9930F0082F26C /* YSSwiTitleV.m in Sources */ = {isa = PBXBuildFile; fileRef = C48FDD5721E9930F0082F26C /* YSSwiTitleV.m */; };
+		C48FDD5E21E9953C0082F26C /* YSSwiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C48FDD5D21E9953C0082F26C /* YSSwiVC.m */; };
 		C49A70E020D0BE06004AA43C /* YSKitCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70CC20D0BE06004AA43C /* YSKitCase.m */; };
 		C49A70E120D0BE06004AA43C /* YSFoundationCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70CF20D0BE06004AA43C /* YSFoundationCase.m */; };
 		C49A70E220D0BE06004AA43C /* UIButton+Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70D320D0BE06004AA43C /* UIButton+Setting.m */; };
@@ -63,6 +65,10 @@
 		C44EC6001FCBF8B800839DF4 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 		C46354991FCD137600FD1602 /* YSTSArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSTSArray.h; sourceTree = "<group>"; };
 		C463549A1FCD137600FD1602 /* YSTSArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSTSArray.m; sourceTree = "<group>"; };
+		C48FDD5621E9930F0082F26C /* YSSwiTitleV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSSwiTitleV.h; sourceTree = "<group>"; };
+		C48FDD5721E9930F0082F26C /* YSSwiTitleV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSSwiTitleV.m; sourceTree = "<group>"; };
+		C48FDD5C21E9953C0082F26C /* YSSwiVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSSwiVC.h; sourceTree = "<group>"; };
+		C48FDD5D21E9953C0082F26C /* YSSwiVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSSwiVC.m; sourceTree = "<group>"; };
 		C49A70CC20D0BE06004AA43C /* YSKitCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSKitCase.m; sourceTree = "<group>"; };
 		C49A70CD20D0BE06004AA43C /* YSFoundationCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSFoundationCase.h; sourceTree = "<group>"; };
 		C49A70CE20D0BE06004AA43C /* YSKitCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSKitCase.h; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 		C4129CA921E46DB600DAFC48 /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				C48FDD5521E992E80082F26C /* SwiComponet */,
 				C4DE1CCE21E8334500B6034E /* CusKit */,
 				043772A721E4D7840030E838 /* ActionSheet */,
 			);
@@ -198,6 +205,17 @@
 				C4DE1CEA21E83F4A00B6034E /* YSKitUtils.m */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		C48FDD5521E992E80082F26C /* SwiComponet */ = {
+			isa = PBXGroup;
+			children = (
+				C48FDD5621E9930F0082F26C /* YSSwiTitleV.h */,
+				C48FDD5721E9930F0082F26C /* YSSwiTitleV.m */,
+				C48FDD5C21E9953C0082F26C /* YSSwiVC.h */,
+				C48FDD5D21E9953C0082F26C /* YSSwiVC.m */,
+			);
+			path = SwiComponet;
 			sourceTree = "<group>";
 		};
 		C49A70CB20D0BE06004AA43C /* TestCase */ = {
@@ -418,10 +436,12 @@
 				C4A0D6E021E71F2100A21143 /* UITableView+Setting.m in Sources */,
 				C44EC5E81FCBF2AC00839DF4 /* YSSafeAryVC.m in Sources */,
 				C4DE1CDA21E8338300B6034E /* YSTableM.m in Sources */,
+				C48FDD5E21E9953C0082F26C /* YSSwiVC.m in Sources */,
 				C4DE1CDC21E8338300B6034E /* YSCellM.m in Sources */,
 				043772AD21E4D7EB0030E838 /* YSActionSheetV.m in Sources */,
 				C49A70E820D0BE06004AA43C /* YSLeftDetailVC.m in Sources */,
 				C4DE1CEB21E83F4A00B6034E /* YSKitUtils.m in Sources */,
+				C48FDD5821E9930F0082F26C /* YSSwiTitleV.m in Sources */,
 				C49A70E520D0BE06004AA43C /* YSControlVC.m in Sources */,
 				C44EC5FE1FCBF86900839DF4 /* YSSpeechVC.m in Sources */,
 				C4DE1CE821E83EFA00B6034E /* UIImage+Quart.m in Sources */,

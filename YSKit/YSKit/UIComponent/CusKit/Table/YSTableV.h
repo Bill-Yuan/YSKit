@@ -64,7 +64,7 @@ typedef enum : NSUInteger {
  @param type 类型
  @return 数据结果
  */
-- (id)initWithFrame:(CGRect)frame dataSource:(NSArray *)data CellType:(YSTableType)type;
+- (id)initWithFrame:(CGRect)frame dataSource:(NSArray *)data cellType:(YSTableType)type;
 
 
 @end

@@ -36,7 +36,7 @@
 
 #pragma mark --
 #pragma mark life cycle method
-- (id)initWithFrame:(CGRect)frame dataSource:(NSArray *)data CellType:(YSTableType)type{
+- (id)initWithFrame:(CGRect)frame dataSource:(NSArray *)data cellType:(YSTableType)type{
     self = [super initWithFrame:frame];
     if (self) {
         _tableType = type;

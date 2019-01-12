@@ -20,7 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
  @param hdnTime 消失时间
  @return 弹框
  */
-- (instancetype)initWithMsg:(NSString *)msg hdnAfter:(NSTimeInterval)hdnTime;
+- (instancetype)initWithMsg:(NSString *)msg
+                   hdnAfter:(NSTimeInterval)hdnTime;
 
 
 /**
