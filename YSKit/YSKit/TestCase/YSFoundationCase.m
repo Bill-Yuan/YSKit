@@ -16,7 +16,7 @@
     NSDecimalNumber *Sec = [NSDecimalNumber decimalNumberWithString:@"123"];
     
     NSLog(@"=====(%@)=======",[fir decimalNumberBySubtracting:Sec]);
-    NSLog(@"~~~~~(%@)~~~~~",[Sec decimalNumberBySubtracting:fir]);
+    NSLog(@"~~~~~(%@)~~~~~~~",[Sec decimalNumberBySubtracting:fir]);
 }
 
 + (void)testGCD

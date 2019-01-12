@@ -66,25 +66,31 @@ NSParagraphStyleAttributeName     设置文本段落排版，为NSParagraphStyle
 }
 
 - (void)setModel:(YSUserInfoM *)model{
+    
     self.nickLbl.text = model.nickName;
     self.signLbl.text = model.signature;
     
     if (!model.avator.length) {
-        UIImage *image = [[YSKitUtils imageWithColor:[UIColor purpleColor] withFrame:CGRectMake(0, 0, 64, 64)] imageWithCornerRadius:10];
+        UIImage *image = [[UIImage imageNamed:@"photo"] imageWithCornerRadius:10];
         
         NSDictionary *attDic = @{NSFontAttributeName:[UIFont systemFontOfSize:12],
                                  NSForegroundColorAttributeName:[UIColor lightGrayColor]};
+        
         image = [YSKitUtils wMarkImage:image text:@"Bob"
                              textPoint:CGPointMake(8, 8)
                       attributedString:attDic];
+        
         [_photoImg setImage:image];
     }
+    
 }
 
 - (void)responeToBtn{
+    
     if (self.clickSnap) {
         self.clickSnap(self.tag);
     }
+    
 }
 
 #pragma mark --
