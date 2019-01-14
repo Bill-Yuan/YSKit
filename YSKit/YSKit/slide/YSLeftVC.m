@@ -22,6 +22,9 @@
 #import "YSMarco.h"
 #import "UIViewController+Setting.h"
 
+
+#import "YSSwiVC.h"
+
 #define MJWeakSelf __weak typeof(self) weakSelf = self;
 
 @interface YSLeftVC ()
@@ -112,7 +115,8 @@
     
         MJWeakSelf;
         _tableV.selectedRow = ^(NSUInteger row,id  _Nonnull data) {
-            [[UIApplication sharedApplication].keyWindow addSubview:weakSelf.actionSheetV];
+            YSSwiVC *swiVC = [YSSwiVC new];
+            [weakSelf.navigationController pushViewController:swiVC animated:YES];
         };
         
         _tableV.headerRefresh = ^{

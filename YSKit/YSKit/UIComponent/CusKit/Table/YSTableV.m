@@ -131,6 +131,15 @@
 }
 
 #pragma mark --
+#pragma mark scrollView delegate method
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSLog(@"~~~~~~~~%@~~~~~%lf",NSStringFromClass([scrollView class]),scrollView.contentOffset.y);
+    if(self.scrollOffset){
+        self.scrollOffset(scrollView.contentOffset);
+    }
+}
+
+#pragma mark --
 #pragma mark tableView delegate method
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _dataSource.count;
@@ -169,10 +178,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     kPreventRepeatClickTime(2.f);
 
-//    if(self.selectedRow){
-//        NSUInteger row = indexPath.row;
-//        self.selectedRow(row, _dataSource[row]);
-//    }
+    if(self.selectedRow){
+        NSUInteger row = indexPath.row;
+        self.selectedRow(row, _dataSource[row]);
+    }
 }
 
 #pragma mark --

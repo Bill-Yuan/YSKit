@@ -54,8 +54,6 @@ UICollectionViewDelegateFlowLayout
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    
-    
 
     return cell;
 }
