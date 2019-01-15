@@ -133,9 +133,14 @@
 #pragma mark --
 #pragma mark scrollView delegate method
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    NSLog(@"~~~~~~~~%@~~~~~%lf",NSStringFromClass([scrollView class]),scrollView.contentOffset.y);
+
+    NSLog(@"*******contentOffset:%lf",scrollView.contentOffset.y);
+
     if(self.scrollOffset){
-        self.scrollOffset(scrollView.contentOffset);
+        CGPoint tPoint = [scrollView.panGestureRecognizer translationInView:scrollView];
+        NSLog(@"*******tPoint:%lf",tPoint.y);
+
+        self.scrollOffset(scrollView.contentOffset, tPoint.y);
     }
 }
 

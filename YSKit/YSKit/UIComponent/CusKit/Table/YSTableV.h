@@ -32,7 +32,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy) void(^footerRefresh)(void);
 
 //偏移量
-@property (nonatomic, copy) void(^scrollOffset)(CGPoint offset);
+@property (nonatomic, copy) void(^scrollOffset)(CGPoint offset, CGFloat dir);
 
 /**
  重置数据
