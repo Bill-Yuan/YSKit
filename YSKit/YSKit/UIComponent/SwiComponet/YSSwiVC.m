@@ -9,11 +9,11 @@
 #import "YSSwiVC.h"
 #import "UIViewController+Setting.h"
 
+#import "YSTableM.h"
 #import "YSTableV.h"
 #import "YSSwiTitleV.h"
-#import "YSUtils.h"
 
-#import "YSTableM.h"
+#import "YSUtils.h"
 
 #define NavH   64
 #define TitleH 88
@@ -127,7 +127,6 @@ UIScrollViewDelegate
             }
         };
     }
-    
 }
 
 @end

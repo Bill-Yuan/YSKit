@@ -24,6 +24,7 @@
 
 
 #import "YSSwiVC.h"
+#import "YSAnimationVC.h"
 
 #define MJWeakSelf __weak typeof(self) weakSelf = self;
 
@@ -115,8 +116,12 @@
     
         MJWeakSelf;
         _tableV.selectedRow = ^(NSUInteger row,id  _Nonnull data) {
-            YSSwiVC *swiVC = [YSSwiVC new];
-            [weakSelf.navigationController pushViewController:swiVC animated:YES];
+//            跳转表单错位显示
+//            YSSwiVC *desVC = [YSSwiVC new];
+//            [weakSelf.navigationController pushViewController:desVC animated:YES];
+            
+            YSAnimationVC *desVC = [YSAnimationVC new];
+            [weakSelf.navigationController pushViewController:desVC animated:YES];
         };
         
         _tableV.headerRefresh = ^{
