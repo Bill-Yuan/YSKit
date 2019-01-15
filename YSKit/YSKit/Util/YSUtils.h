@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define  KTabbarHeight          [YSUtils tabBarHeight]
 #define  THEMECOLOR             UIColorHexFromRGB(0xFFFFFF)
 #define  kScreenWidth           [[UIScreen mainScreen] bounds].size.width
+#define  kScreenHeight           [[UIScreen mainScreen] bounds].size.height
 
 #define UIColorHexFromRGB(rgbValue) \
 [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \

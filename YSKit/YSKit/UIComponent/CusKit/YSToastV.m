@@ -26,7 +26,8 @@
 
 @implementation YSToastV
 
-- (instancetype)initWithMsg:(NSString *)msg hdnAfter:(NSTimeInterval)hdnTime{
+- (instancetype)initWithMsg:(NSString *)msg
+                   hdnAfter:(NSTimeInterval)hdnTime{
     if (self = [super init]) {
         _msg = msg;
         _afterTime = hdnTime;

@@ -36,7 +36,7 @@
 
 #pragma mark --
 #pragma mark life cycle method
-- (id)initWithFrame:(CGRect)frame dataSource:(NSArray *)data CellType:(YSTableType)type{
+- (id)initWithFrame:(CGRect)frame dataSource:(NSArray *)data cellType:(YSTableType)type{
     self = [super initWithFrame:frame];
     if (self) {
         _tableType = type;
@@ -136,6 +136,20 @@
 }
 
 #pragma mark --
+#pragma mark scrollView delegate method
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+
+    NSLog(@"*******contentOffset:%lf",scrollView.contentOffset.y);
+
+    if(self.scrollOffset){
+        CGPoint tPoint = [scrollView.panGestureRecognizer translationInView:scrollView];
+        NSLog(@"*******tPoint:%lf",tPoint.y);
+
+        self.scrollOffset(scrollView.contentOffset, tPoint.y);
+    }
+}
+
+#pragma mark --
 #pragma mark tableView delegate method
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _dataSource.count;
@@ -172,13 +186,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    
-//    kPreventRepeatClickTime(2.f);
-//
-//    if(self.selectedRow){
-//        NSUInteger row = indexPath.row;
-//        self.selectedRow(row, _dataSource[row]);
-//    }
+    kPreventRepeatClickTime(2.f);
+
+    if(self.selectedRow){
+        NSUInteger row = indexPath.row;
+        self.selectedRow(row, _dataSource[row]);
+    }
 }
 
 #pragma mark --

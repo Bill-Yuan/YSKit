@@ -9,7 +9,12 @@
 /* Begin PBXBuildFile section */
 		043772AC21E4D7EB0030E838 /* YSActionHeadV.m in Sources */ = {isa = PBXBuildFile; fileRef = 043772A921E4D7EB0030E838 /* YSActionHeadV.m */; };
 		043772AD21E4D7EB0030E838 /* YSActionSheetV.m in Sources */ = {isa = PBXBuildFile; fileRef = 043772AB21E4D7EB0030E838 /* YSActionSheetV.m */; };
+<<<<<<< HEAD
 		04FBFFB421EA3DE4004897C3 /* YSDisVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FBFFB321EA3DE4004897C3 /* YSDisVC.m */; };
+=======
+		C44D5D4721EDB55B00800D70 /* YSAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C44D5D4621EDB55B00800D70 /* YSAnimation.m */; };
+		C44D5D4C21EDDAF000800D70 /* YSAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44D5D4B21EDDAF000800D70 /* YSAnimationVC.m */; };
+>>>>>>> 4bd01b44b0f64715b3b7e8414faf80d546186950
 		C44EC5E51FCBF2AC00839DF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5E41FCBF2AC00839DF4 /* AppDelegate.m */; };
 		C44EC5E81FCBF2AC00839DF4 /* YSSafeAryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5E71FCBF2AC00839DF4 /* YSSafeAryVC.m */; };
 		C44EC5ED1FCBF2AC00839DF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44EC5EC1FCBF2AC00839DF4 /* Assets.xcassets */; };
@@ -18,6 +23,8 @@
 		C44EC5FB1FCBF2E100839DF4 /* GesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5FA1FCBF2E100839DF4 /* GesCell.m */; };
 		C44EC5FE1FCBF86900839DF4 /* YSSpeechVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5FD1FCBF86900839DF4 /* YSSpeechVC.m */; };
 		C463549B1FCD137600FD1602 /* YSTSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C463549A1FCD137600FD1602 /* YSTSArray.m */; };
+		C48FDD5821E9930F0082F26C /* YSSwiTitleV.m in Sources */ = {isa = PBXBuildFile; fileRef = C48FDD5721E9930F0082F26C /* YSSwiTitleV.m */; };
+		C48FDD5E21E9953C0082F26C /* YSSwiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C48FDD5D21E9953C0082F26C /* YSSwiVC.m */; };
 		C49A70E020D0BE06004AA43C /* YSKitCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70CC20D0BE06004AA43C /* YSKitCase.m */; };
 		C49A70E120D0BE06004AA43C /* YSFoundationCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70CF20D0BE06004AA43C /* YSFoundationCase.m */; };
 		C49A70E220D0BE06004AA43C /* UIButton+Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70D320D0BE06004AA43C /* UIButton+Setting.m */; };
@@ -48,9 +55,17 @@
 		043772AA21E4D7EB0030E838 /* YSActionHeadV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSActionHeadV.h; sourceTree = "<group>"; };
 		043772AB21E4D7EB0030E838 /* YSActionSheetV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSActionSheetV.m; sourceTree = "<group>"; };
 		04E6CBB3324961969B9D71A7 /* libPods-YSKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YSKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+<<<<<<< HEAD
 		04FBFFB221EA3DE4004897C3 /* YSDisVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSDisVC.h; sourceTree = "<group>"; };
 		04FBFFB321EA3DE4004897C3 /* YSDisVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSDisVC.m; sourceTree = "<group>"; };
 		C44EC5E01FCBF2AC00839DF4 /* 大杂烩.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "大杂烩.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+=======
+		C44D5D4521EDB55B00800D70 /* YSAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSAnimation.h; sourceTree = "<group>"; };
+		C44D5D4621EDB55B00800D70 /* YSAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSAnimation.m; sourceTree = "<group>"; };
+		C44D5D4A21EDDAF000800D70 /* YSAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSAnimationVC.h; sourceTree = "<group>"; };
+		C44D5D4B21EDDAF000800D70 /* YSAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSAnimationVC.m; sourceTree = "<group>"; };
+		C44EC5E01FCBF2AC00839DF4 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+>>>>>>> 4bd01b44b0f64715b3b7e8414faf80d546186950
 		C44EC5E31FCBF2AC00839DF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C44EC5E41FCBF2AC00839DF4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C44EC5E61FCBF2AC00839DF4 /* YSSafeAryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSSafeAryVC.h; sourceTree = "<group>"; };
@@ -66,6 +81,10 @@
 		C44EC6001FCBF8B800839DF4 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
 		C46354991FCD137600FD1602 /* YSTSArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSTSArray.h; sourceTree = "<group>"; };
 		C463549A1FCD137600FD1602 /* YSTSArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSTSArray.m; sourceTree = "<group>"; };
+		C48FDD5621E9930F0082F26C /* YSSwiTitleV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSSwiTitleV.h; sourceTree = "<group>"; };
+		C48FDD5721E9930F0082F26C /* YSSwiTitleV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSSwiTitleV.m; sourceTree = "<group>"; };
+		C48FDD5C21E9953C0082F26C /* YSSwiVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSSwiVC.h; sourceTree = "<group>"; };
+		C48FDD5D21E9953C0082F26C /* YSSwiVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSSwiVC.m; sourceTree = "<group>"; };
 		C49A70CC20D0BE06004AA43C /* YSKitCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSKitCase.m; sourceTree = "<group>"; };
 		C49A70CD20D0BE06004AA43C /* YSFoundationCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSFoundationCase.h; sourceTree = "<group>"; };
 		C49A70CE20D0BE06004AA43C /* YSKitCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSKitCase.h; sourceTree = "<group>"; };
@@ -146,11 +165,25 @@
 		C4129CA921E46DB600DAFC48 /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				04FBFFB121EA3DBF004897C3 /* DisLocation */,
+=======
+				C44D5D4921EDDADE00800D70 /* Animation */,
+				C48FDD5521E992E80082F26C /* SwiComponet */,
+>>>>>>> 4bd01b44b0f64715b3b7e8414faf80d546186950
 				C4DE1CCE21E8334500B6034E /* CusKit */,
 				043772A721E4D7840030E838 /* ActionSheet */,
 			);
 			path = UIComponent;
+			sourceTree = "<group>";
+		};
+		C44D5D4921EDDADE00800D70 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				C44D5D4A21EDDAF000800D70 /* YSAnimationVC.h */,
+				C44D5D4B21EDDAF000800D70 /* YSAnimationVC.m */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		C44EC5D71FCBF2AB00839DF4 = {
@@ -166,7 +199,7 @@
 		C44EC5E11FCBF2AC00839DF4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C44EC5E01FCBF2AC00839DF4 /* 大杂烩.app */,
+				C44EC5E01FCBF2AC00839DF4 /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,8 +243,21 @@
 				C4BB926121E4A9B6000BA387 /* YSUtils.m */,
 				C4DE1CE921E83F4A00B6034E /* YSKitUtils.h */,
 				C4DE1CEA21E83F4A00B6034E /* YSKitUtils.m */,
+				C44D5D4521EDB55B00800D70 /* YSAnimation.h */,
+				C44D5D4621EDB55B00800D70 /* YSAnimation.m */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		C48FDD5521E992E80082F26C /* SwiComponet */ = {
+			isa = PBXGroup;
+			children = (
+				C48FDD5621E9930F0082F26C /* YSSwiTitleV.h */,
+				C48FDD5721E9930F0082F26C /* YSSwiTitleV.m */,
+				C48FDD5C21E9953C0082F26C /* YSSwiVC.h */,
+				C48FDD5D21E9953C0082F26C /* YSSwiVC.m */,
+			);
+			path = SwiComponet;
 			sourceTree = "<group>";
 		};
 		C49A70CB20D0BE06004AA43C /* TestCase */ = {
@@ -334,7 +380,7 @@
 			);
 			name = YSKit;
 			productName = YSKit;
-			productReference = C44EC5E01FCBF2AC00839DF4 /* 大杂烩.app */;
+			productReference = C44EC5E01FCBF2AC00839DF4 /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -432,13 +478,16 @@
 				C4A0D6E021E71F2100A21143 /* UITableView+Setting.m in Sources */,
 				C44EC5E81FCBF2AC00839DF4 /* YSSafeAryVC.m in Sources */,
 				C4DE1CDA21E8338300B6034E /* YSTableM.m in Sources */,
+				C48FDD5E21E9953C0082F26C /* YSSwiVC.m in Sources */,
 				C4DE1CDC21E8338300B6034E /* YSCellM.m in Sources */,
 				043772AD21E4D7EB0030E838 /* YSActionSheetV.m in Sources */,
 				C49A70E820D0BE06004AA43C /* YSLeftDetailVC.m in Sources */,
 				C4DE1CEB21E83F4A00B6034E /* YSKitUtils.m in Sources */,
+				C48FDD5821E9930F0082F26C /* YSSwiTitleV.m in Sources */,
 				C49A70E520D0BE06004AA43C /* YSControlVC.m in Sources */,
 				C44EC5FE1FCBF86900839DF4 /* YSSpeechVC.m in Sources */,
 				C4DE1CE821E83EFA00B6034E /* UIImage+Quart.m in Sources */,
+				C44D5D4C21EDDAF000800D70 /* YSAnimationVC.m in Sources */,
 				C49A70E420D0BE06004AA43C /* YSLeftVC.m in Sources */,
 				C44EC5F31FCBF2AC00839DF4 /* main.m in Sources */,
 				04FBFFB421EA3DE4004897C3 /* YSDisVC.m in Sources */,
@@ -455,6 +504,7 @@
 				C49A70E220D0BE06004AA43C /* UIButton+Setting.m in Sources */,
 				C44EC5E51FCBF2AC00839DF4 /* AppDelegate.m in Sources */,
 				C44EC5FB1FCBF2E100839DF4 /* GesCell.m in Sources */,
+				C44D5D4721EDB55B00800D70 /* YSAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,7 +637,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bob.com.YSKit;
-				PRODUCT_NAME = "大杂烩";
+				PRODUCT_NAME = Demo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -604,7 +654,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bob.com.YSKit;
-				PRODUCT_NAME = "大杂烩";
+				PRODUCT_NAME = Demo;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

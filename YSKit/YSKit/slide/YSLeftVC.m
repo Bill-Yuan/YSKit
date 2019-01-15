@@ -22,6 +22,10 @@
 #import "YSMarco.h"
 #import "UIViewController+Setting.h"
 
+
+#import "YSSwiVC.h"
+#import "YSAnimationVC.h"
+
 #define MJWeakSelf __weak typeof(self) weakSelf = self;
 
 @interface YSLeftVC ()
@@ -106,13 +110,18 @@
     if (!_tableV) {
         _tableV = [[YSTableV alloc] initWithFrame:self.view.bounds
                                        dataSource:@[]
-                                         CellType:YSTypeUserInfo];
+                                         cellType:YSTypeUserInfo];
         [self.view addSubview:_tableV];
         
     
         MJWeakSelf;
         _tableV.selectedRow = ^(NSUInteger row,id  _Nonnull data) {
-            [[UIApplication sharedApplication].keyWindow addSubview:weakSelf.actionSheetV];
+//            跳转表单错位显示
+//            YSSwiVC *desVC = [YSSwiVC new];
+//            [weakSelf.navigationController pushViewController:desVC animated:YES];
+            
+            YSAnimationVC *desVC = [YSAnimationVC new];
+            [weakSelf.navigationController pushViewController:desVC animated:YES];
         };
         
         _tableV.headerRefresh = ^{

@@ -31,6 +31,8 @@ typedef enum : NSUInteger {
 //底部刷新
 @property (nonatomic, copy) void(^footerRefresh)(void);
 
+//偏移量
+@property (nonatomic, copy) void(^scrollOffset)(CGPoint offset, CGFloat dir);
 
 /**
  重置数据
@@ -64,7 +66,7 @@ typedef enum : NSUInteger {
  @param type 类型
  @return 数据结果
  */
-- (id)initWithFrame:(CGRect)frame dataSource:(NSArray *)data CellType:(YSTableType)type;
+- (id)initWithFrame:(CGRect)frame dataSource:(NSArray *)data cellType:(YSTableType)type;
 
 
 - (void)scrollToPoint:(CGPoint)point;
