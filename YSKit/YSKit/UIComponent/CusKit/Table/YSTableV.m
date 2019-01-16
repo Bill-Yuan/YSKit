@@ -107,6 +107,11 @@
     
 }
 
+
+- (void)scrollToPoint:(CGPoint)point{
+    [_tableV setContentOffset:point animated:YES];
+}
+
 - (void)endRefresh{
     [_tableV.mj_header endRefreshing];
     [_tableV.mj_footer endRefreshing];
