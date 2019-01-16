@@ -14,7 +14,6 @@
     
     NSLog(@"start...");
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextBeginPath(context);
     
     dispatch_queue_t queue1 = dispatch_queue_create("group1", DISPATCH_QUEUE_CONCURRENT);
     dispatch_group_t group1 = dispatch_group_create();
@@ -53,7 +52,6 @@
     //等待上面的任务全部完成后，会收到通知执行block中的代码 （不会阻塞线程）
     dispatch_group_notify(group1, queue1, ^{
         CGContextStrokePath(context);
-        CGContextClosePath(context);
         NSLog(@"end...");
     });
     
