@@ -13,49 +13,23 @@
 - (void)drawRect:(CGRect)rect{
     
     NSLog(@"start...");
+    
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    dispatch_queue_t queue1 = dispatch_queue_create("group1", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_group_t group1 = dispatch_group_create();
-    
-    dispatch_group_async(group1, queue1, ^{
-        dispatch_sync(queue1, ^{
-            [self drawLine:context];
-            [self drawDashLine:context];
-        });
-    });
-    
-    dispatch_group_async(group1, queue1, ^{
-        dispatch_sync(queue1, ^{
-            [self drawText:context content:@"Hello Context"];
-        });
-    });
-    
-    dispatch_group_async(group1, queue1, ^{
-        dispatch_sync(queue1, ^{
-            [self drawArc:context];
-            [self drawEllipse:context];
-            
-        });
-    });
-    
-    dispatch_group_async(group1, queue1, ^{
-        dispatch_sync(queue1, ^{
-            [self drawCurve:context];
-            [self drawQuadCurve:context];
-            
-        });
-    });
-    
-    dispatch_group_wait(group1, DISPATCH_TIME_FOREVER);
-    
-    //等待上面的任务全部完成后，会收到通知执行block中的代码 （不会阻塞线程）
-    dispatch_group_notify(group1, queue1, ^{
-        CGContextStrokePath(context);
-        NSLog(@"end...");
-    });
-    
-    NSLog(@"22222");
+
+    [self drawLine:context];
+    [self drawDashLine:context];
+
+    [self drawText:context content:@"Hello Context"];
+
+    [self drawArc:context];
+    [self drawEllipse:context];
+
+    [self drawCurve:context];
+    [self drawQuadCurve:context];
+
+    CGContextStrokePath(context);
+ 
+    NSLog(@"end...");
 }
 
 
