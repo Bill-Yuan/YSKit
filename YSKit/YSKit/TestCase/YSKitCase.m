@@ -15,9 +15,10 @@
 + (void)enumateFont
 {
     for (id family in [UIFont familyNames]) {
+        NSLog(@"\n\n\nfamilyName:%@",family);
         NSArray* fonts = [UIFont fontNamesForFamilyName:family];
         for (id font in fonts){
-            NSLog(@"字体名:%@",font);
+            NSLog(@"fontName:%@",font);
         }
     }
 }

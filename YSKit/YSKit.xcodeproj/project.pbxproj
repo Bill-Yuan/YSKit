@@ -41,6 +41,7 @@
 		C4DE1CDE21E8338300B6034E /* YSToastV.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DE1CD921E8338300B6034E /* YSToastV.m */; };
 		C4DE1CE821E83EFA00B6034E /* UIImage+Quart.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DE1CE721E83EFA00B6034E /* UIImage+Quart.m */; };
 		C4DE1CEB21E83F4A00B6034E /* YSKitUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DE1CEA21E83F4A00B6034E /* YSKitUtils.m */; };
+		C4ED6A4821EEFE2400B6DBFC /* YSCGV.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ED6A4721EEFE2400B6DBFC /* YSCGV.m */; };
 		E24B403B1E0B77E538B966EE /* libPods-YSKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E6CBB3324961969B9D71A7 /* libPods-YSKit.a */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,8 @@
 		C4DE1CE721E83EFA00B6034E /* UIImage+Quart.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Quart.m"; sourceTree = "<group>"; };
 		C4DE1CE921E83F4A00B6034E /* YSKitUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSKitUtils.h; sourceTree = "<group>"; };
 		C4DE1CEA21E83F4A00B6034E /* YSKitUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSKitUtils.m; sourceTree = "<group>"; };
+		C4ED6A4621EEFE2400B6DBFC /* YSCGV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSCGV.h; sourceTree = "<group>"; };
+		C4ED6A4721EEFE2400B6DBFC /* YSCGV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSCGV.m; sourceTree = "<group>"; };
 		DD80703350434711BFD36C9A /* Pods-YSKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSKit/Pods-YSKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +224,8 @@
 				C4DE1CEA21E83F4A00B6034E /* YSKitUtils.m */,
 				C44D5D4521EDB55B00800D70 /* YSAnimation.h */,
 				C44D5D4621EDB55B00800D70 /* YSAnimation.m */,
+				C4ED6A4621EEFE2400B6DBFC /* YSCGV.h */,
+				C4ED6A4721EEFE2400B6DBFC /* YSCGV.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -453,6 +458,7 @@
 				C463549B1FCD137600FD1602 /* YSTSArray.m in Sources */,
 				C4A0D6E021E71F2100A21143 /* UITableView+Setting.m in Sources */,
 				C44EC5E81FCBF2AC00839DF4 /* YSSafeAryVC.m in Sources */,
+				C4ED6A4821EEFE2400B6DBFC /* YSCGV.m in Sources */,
 				C4DE1CDA21E8338300B6034E /* YSTableM.m in Sources */,
 				C48FDD5E21E9953C0082F26C /* YSSwiVC.m in Sources */,
 				C4DE1CDC21E8338300B6034E /* YSCellM.m in Sources */,
