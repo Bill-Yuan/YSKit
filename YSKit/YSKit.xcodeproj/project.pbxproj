@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		043772AC21E4D7EB0030E838 /* YSActionHeadV.m in Sources */ = {isa = PBXBuildFile; fileRef = 043772A921E4D7EB0030E838 /* YSActionHeadV.m */; };
 		043772AD21E4D7EB0030E838 /* YSActionSheetV.m in Sources */ = {isa = PBXBuildFile; fileRef = 043772AB21E4D7EB0030E838 /* YSActionSheetV.m */; };
-
 		C44D5D4721EDB55B00800D70 /* YSAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C44D5D4621EDB55B00800D70 /* YSAnimation.m */; };
 		C44D5D4C21EDDAF000800D70 /* YSAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44D5D4B21EDDAF000800D70 /* YSAnimationVC.m */; };
-
-        C44EC5E51FCBF2AC00839DF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5E41FCBF2AC00839DF4 /* AppDelegate.m */; };
+		C44EC5E51FCBF2AC00839DF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5E41FCBF2AC00839DF4 /* AppDelegate.m */; };
 		C44EC5E81FCBF2AC00839DF4 /* YSSafeAryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5E71FCBF2AC00839DF4 /* YSSafeAryVC.m */; };
 		C44EC5ED1FCBF2AC00839DF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44EC5EC1FCBF2AC00839DF4 /* Assets.xcassets */; };
 		C44EC5F01FCBF2AC00839DF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C44EC5EE1FCBF2AC00839DF4 /* LaunchScreen.storyboard */; };
@@ -44,6 +42,7 @@
 		C4DE1CE821E83EFA00B6034E /* UIImage+Quart.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DE1CE721E83EFA00B6034E /* UIImage+Quart.m */; };
 		C4DE1CEB21E83F4A00B6034E /* YSKitUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DE1CEA21E83F4A00B6034E /* YSKitUtils.m */; };
 		C4ED6A4821EEFE2400B6DBFC /* YSCGV.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ED6A4721EEFE2400B6DBFC /* YSCGV.m */; };
+		C4ED6A4A21EF228000B6DBFC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4ED6A4921EF228000B6DBFC /* CoreText.framework */; };
 		E24B403B1E0B77E538B966EE /* libPods-YSKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E6CBB3324961969B9D71A7 /* libPods-YSKit.a */; };
 /* End PBXBuildFile section */
 
@@ -54,14 +53,12 @@
 		043772AA21E4D7EB0030E838 /* YSActionHeadV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSActionHeadV.h; sourceTree = "<group>"; };
 		043772AB21E4D7EB0030E838 /* YSActionSheetV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSActionSheetV.m; sourceTree = "<group>"; };
 		04E6CBB3324961969B9D71A7 /* libPods-YSKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YSKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-
 		C44D5D4521EDB55B00800D70 /* YSAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSAnimation.h; sourceTree = "<group>"; };
 		C44D5D4621EDB55B00800D70 /* YSAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSAnimation.m; sourceTree = "<group>"; };
 		C44D5D4A21EDDAF000800D70 /* YSAnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSAnimationVC.h; sourceTree = "<group>"; };
 		C44D5D4B21EDDAF000800D70 /* YSAnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSAnimationVC.m; sourceTree = "<group>"; };
 		C44EC5E01FCBF2AC00839DF4 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-
-        C44EC5E31FCBF2AC00839DF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C44EC5E31FCBF2AC00839DF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C44EC5E41FCBF2AC00839DF4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C44EC5E61FCBF2AC00839DF4 /* YSSafeAryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSSafeAryVC.h; sourceTree = "<group>"; };
 		C44EC5E71FCBF2AC00839DF4 /* YSSafeAryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSSafeAryVC.m; sourceTree = "<group>"; };
@@ -123,6 +120,7 @@
 		C4DE1CEA21E83F4A00B6034E /* YSKitUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSKitUtils.m; sourceTree = "<group>"; };
 		C4ED6A4621EEFE2400B6DBFC /* YSCGV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSCGV.h; sourceTree = "<group>"; };
 		C4ED6A4721EEFE2400B6DBFC /* YSCGV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSCGV.m; sourceTree = "<group>"; };
+		C4ED6A4921EF228000B6DBFC /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		DD80703350434711BFD36C9A /* Pods-YSKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSKit/Pods-YSKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4ED6A4A21EF228000B6DBFC /* CoreText.framework in Frameworks */,
 				E24B403B1E0B77E538B966EE /* libPods-YSKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,16 +146,6 @@
 				043772AB21E4D7EB0030E838 /* YSActionSheetV.m */,
 			);
 			path = ActionSheet;
-			sourceTree = "<group>";
-		};
-		04FBFFB121EA3DBF004897C3 /* DisLocation */ = {
-			isa = PBXGroup;
-			children = (
-				04FBFFB221EA3DE4004897C3 /* YSDisVC.h */,
-				04FBFFB321EA3DE4004897C3 /* YSDisVC.m */,
-			);
-			name = DisLocation;
-			path = CusKit/DisLocation;
 			sourceTree = "<group>";
 		};
 		C4129CA921E46DB600DAFC48 /* UIComponent */ = {
@@ -221,6 +210,7 @@
 		C44EC5FF1FCBF8B800839DF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4ED6A4921EF228000B6DBFC /* CoreText.framework */,
 				C44EC6001FCBF8B800839DF4 /* Speech.framework */,
 				04E6CBB3324961969B9D71A7 /* libPods-YSKit.a */,
 			);
@@ -486,7 +476,6 @@
 				C44D5D4C21EDDAF000800D70 /* YSAnimationVC.m in Sources */,
 				C49A70E420D0BE06004AA43C /* YSLeftVC.m in Sources */,
 				C44EC5F31FCBF2AC00839DF4 /* main.m in Sources */,
-				04FBFFB421EA3DE4004897C3 /* YSDisVC.m in Sources */,
 				043772AC21E4D7EB0030E838 /* YSActionHeadV.m in Sources */,
 				C4BB926221E4A9B6000BA387 /* YSUtils.m in Sources */,
 				C4DE1CDB21E8338300B6034E /* YSTableV.m in Sources */,

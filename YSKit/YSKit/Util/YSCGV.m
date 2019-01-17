@@ -7,25 +7,41 @@
 //
 
 #import "YSCGV.h"
+#import<CoreText/CoreText.h>
 
 @implementation YSCGV
 
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        NSLog(@"__%s__",__func__);
+    }
+    return self;
+}
+
+
+- (void)setContent:(NSString *)content{
+    _content = content;
+    NSLog(@"__%s__",__func__);
+}
+
 - (void)drawRect:(CGRect)rect{
+    [super drawRect:rect];
     
     NSLog(@"start...");
     
     CGContextRef context = UIGraphicsGetCurrentContext();
 
-    [self drawLine:context];
-    [self drawDashLine:context];
+//    [self drawLine:context];
+//    [self drawDashLine:context];
 
-    [self drawText:context content:@"Hello Context"];
+    [self drawText:context];
 
-    [self drawArc:context];
-    [self drawEllipse:context];
-
-    [self drawCurve:context];
-    [self drawQuadCurve:context];
+//    [self drawArc:context];
+//    [self drawEllipse:context];
+//
+//    [self drawCurve:context];
+//    [self drawQuadCurve:context];
 
     CGContextStrokePath(context);
  
@@ -127,22 +143,18 @@
  
  @param context 画布
  */
-- (void)drawText:(CGContextRef)context content:(NSString *)content{
-    
-    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
-    style.alignment = NSTextAlignmentCenter;
+- (void)drawText:(CGContextRef)context{
 
+    CGRect frame = CGRectMake(20, 40, 280, 20);
+    
     NSDictionary *attri = @{
-                            NSParagraphStyleAttributeName:style,
                             NSFontAttributeName:[UIFont systemFontOfSize:12],
                             NSForegroundColorAttributeName:[UIColor redColor],
                             NSBackgroundColorAttributeName:[UIColor whiteColor]
                             };
     
-    CGRect frame = CGRectMake(20, 40, 280, 20);
-    
-    [content drawInRect:frame
-         withAttributes:attri];
+    [_content drawInRect:frame
+          withAttributes:attri];
 }
 
 @end
