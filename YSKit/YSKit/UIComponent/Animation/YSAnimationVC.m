@@ -28,11 +28,14 @@
     self.view.backgroundColor = [UIColor whiteColor];
  
     [self cycleImg];
-    
-    [self keyAnimation];
-//    [self startDisplayLink];
  }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    [self keyAnimation];
+    //    [self startDisplayLink];
+}
 
 - (void)keyAnimation{
     [UIView animateKeyframesWithDuration:2.0 delay:0.f options:UIViewKeyframeAnimationOptionRepeat animations:^{
@@ -83,7 +86,12 @@
 - (void)startDisplayLink{
     _disCnt = 0;
     _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(refreshImage)];
-    _displayLink.preferredFramesPerSecond = 10;
+    if (@available(iOS 10.0, *)) {
+        _displayLink.preferredFramesPerSecond = 10;
+    } else {
+        // Fallback on earlier versions
+        _displayLink.frameInterval = 10;
+    }
     [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     
     _displayLink.paused = NO;
@@ -96,7 +104,6 @@
 }
 
 - (void)refreshImage{
-    NSLog(@"=====");
     if (_disCnt > 119) {
         [self endDisplayLink];
     }else{
@@ -109,7 +116,7 @@
 #pragma mark init method
 - (UIImageView *)cycleImg{
     if (!_cycleImg) {
-        _cycleImg = [[UIImageView alloc] initWithFrame:CGRectMake( 80, 100, 100, 100)];
+        _cycleImg = [[UIImageView alloc] initWithFrame:CGRectMake(80, 100, 100, 100)];
         [self.view addSubview:_cycleImg];
         [_cycleImg setImage:[UIImage imageNamed:@"cyle"]];
     }

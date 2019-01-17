@@ -31,6 +31,7 @@
 		C49A70E720D0BE06004AA43C /* YSCenterDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70DD20D0BE06004AA43C /* YSCenterDetailVC.m */; };
 		C49A70E820D0BE06004AA43C /* YSLeftDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70DF20D0BE06004AA43C /* YSLeftDetailVC.m */; };
 		C49A70EB20D0BE0E004AA43C /* YSSettingMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A70EA20D0BE0E004AA43C /* YSSettingMgr.m */; };
+		C49D7EC621F0432A0082DB88 /* YSDrawVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C49D7EC521F0432A0082DB88 /* YSDrawVC.m */; };
 		C4A0D6DD21E717FE00A21143 /* UILabel+Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0D6DC21E717FE00A21143 /* UILabel+Setting.m */; };
 		C4A0D6E021E71F2100A21143 /* UITableView+Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A0D6DF21E71F2100A21143 /* UITableView+Setting.m */; };
 		C4BB926221E4A9B6000BA387 /* YSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BB926121E4A9B6000BA387 /* YSUtils.m */; };
@@ -97,6 +98,8 @@
 		C49A70DF20D0BE06004AA43C /* YSLeftDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSLeftDetailVC.m; sourceTree = "<group>"; };
 		C49A70E920D0BE0E004AA43C /* YSSettingMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSSettingMgr.h; sourceTree = "<group>"; };
 		C49A70EA20D0BE0E004AA43C /* YSSettingMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSSettingMgr.m; sourceTree = "<group>"; };
+		C49D7EC421F0432A0082DB88 /* YSDrawVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSDrawVC.h; sourceTree = "<group>"; };
+		C49D7EC521F0432A0082DB88 /* YSDrawVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSDrawVC.m; sourceTree = "<group>"; };
 		C4A0D6DB21E717FE00A21143 /* UILabel+Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Setting.h"; sourceTree = "<group>"; };
 		C4A0D6DC21E717FE00A21143 /* UILabel+Setting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Setting.m"; sourceTree = "<group>"; };
 		C4A0D6DE21E71F2100A21143 /* UITableView+Setting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Setting.h"; sourceTree = "<group>"; };
@@ -151,6 +154,7 @@
 		C4129CA921E46DB600DAFC48 /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				C49D7EC321F043180082DB88 /* Drawing */,
 				C44D5D4921EDDADE00800D70 /* Animation */,
 				C48FDD5521E992E80082F26C /* SwiComponet */,
 				C4DE1CCE21E8334500B6034E /* CusKit */,
@@ -290,6 +294,15 @@
 				C49A70DD20D0BE06004AA43C /* YSCenterDetailVC.m */,
 			);
 			path = slide;
+			sourceTree = "<group>";
+		};
+		C49D7EC321F043180082DB88 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				C49D7EC421F0432A0082DB88 /* YSDrawVC.h */,
+				C49D7EC521F0432A0082DB88 /* YSDrawVC.m */,
+			);
+			path = Drawing;
 			sourceTree = "<group>";
 		};
 		C4A68D9920D0E80000334B9B /* threadSafe */ = {
@@ -483,6 +496,7 @@
 				C4A0D6DD21E717FE00A21143 /* UILabel+Setting.m in Sources */,
 				C4DE1CDD21E8338300B6034E /* YSTableL.m in Sources */,
 				C49A70EB20D0BE0E004AA43C /* YSSettingMgr.m in Sources */,
+				C49D7EC621F0432A0082DB88 /* YSDrawVC.m in Sources */,
 				C49A70E620D0BE06004AA43C /* YSCenterVC.m in Sources */,
 				C49A70E320D0BE06004AA43C /* UIViewController+Setting.m in Sources */,
 				C49A70E020D0BE06004AA43C /* YSKitCase.m in Sources */,
@@ -619,7 +633,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = YSKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bob.com.YSKit;
 				PRODUCT_NAME = Demo;
@@ -636,7 +650,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = YSKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bob.com.YSKit;
 				PRODUCT_NAME = Demo;

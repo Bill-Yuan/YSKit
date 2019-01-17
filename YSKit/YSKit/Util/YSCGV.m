@@ -32,16 +32,16 @@
     
     CGContextRef context = UIGraphicsGetCurrentContext();
 
-//    [self drawLine:context];
-//    [self drawDashLine:context];
+    [self drawLine:context];
+    [self drawDashLine:context];
 
     [self drawText:context];
 
-//    [self drawArc:context];
-//    [self drawEllipse:context];
-//
-//    [self drawCurve:context];
-//    [self drawQuadCurve:context];
+    [self drawArc:context];
+    [self drawEllipse:context];
+
+    [self drawCurve:context];
+    [self drawQuadCurve:context];
 
     CGContextStrokePath(context);
  
