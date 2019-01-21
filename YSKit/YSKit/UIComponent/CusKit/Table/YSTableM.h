@@ -26,6 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 //用户签名
 @property (nonatomic, copy) NSString *signature;
 
+
+@property (nonatomic, copy) NSString *className;
+
 @end
 
 NS_ASSUME_NONNULL_END

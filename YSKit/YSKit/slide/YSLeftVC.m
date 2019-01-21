@@ -90,14 +90,16 @@
         [_tableV resetData];
     }
     
+    NSArray *classArr = @[@"YSSwiVC",@"YSAnimationVC",@"YSDrawVC"];
     NSMutableArray *result = [@[] mutableCopy];
-    for (int i = 1; i <= _pageCnt; i++) {
+    for (NSString *className in classArr) {
         NSString *uId = [@(_dataArr.count + 1) stringValue];
         
         YSUserInfoM *model = [YSUserInfoM new];
-        model.userId = i;
+        model.userId = 0;
         model.nickName = uId;
         model.signature = @"hello kitty";
+        model.className = className;
         
         [result addObject:model];
         [_dataArr addObject:model];
@@ -118,28 +120,9 @@
         MJWeakSelf;
         _tableV.selectedRow = ^(NSUInteger row,id  _Nonnull data) {
 
-            switch (row%3) {
-                case 0:{
-                    //跳转表单错位显示
-                    YSSwiVC *desVC = [YSSwiVC new];
-                    [weakSelf.navigationController pushViewController:desVC animated:YES];
-                }
-                    break;
-                case 1:{
-                    //动画合集
-                    YSAnimationVC *desVC = [YSAnimationVC new];
-                    [weakSelf.navigationController pushViewController:desVC animated:YES];
-                }
-                    break;
-                default:{
-                    //画图合集
-                    YSDrawVC *desVC = [YSDrawVC new];
-                    [weakSelf.navigationController pushViewController:desVC animated:YES];
-
-                }
-                    break;
-            }
-          
+            YSUserInfoM *model  = (YSUserInfoM *)data;
+            Class class = NSClassFromString(model.className);            
+            [weakSelf.navigationController pushViewController:[class new] animated:YES];
         };
         
         _tableV.headerRefresh = ^{
