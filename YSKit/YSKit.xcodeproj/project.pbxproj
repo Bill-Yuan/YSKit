@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		043772AC21E4D7EB0030E838 /* YSActionHeadV.m in Sources */ = {isa = PBXBuildFile; fileRef = 043772A921E4D7EB0030E838 /* YSActionHeadV.m */; };
 		043772AD21E4D7EB0030E838 /* YSActionSheetV.m in Sources */ = {isa = PBXBuildFile; fileRef = 043772AB21E4D7EB0030E838 /* YSActionSheetV.m */; };
+		04DAF93521FA00D8000EBFB0 /* YSCycleV.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DAF93421FA00D8000EBFB0 /* YSCycleV.m */; };
 		C44D5D4721EDB55B00800D70 /* YSAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C44D5D4621EDB55B00800D70 /* YSAnimation.m */; };
 		C44D5D4C21EDDAF000800D70 /* YSAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C44D5D4B21EDDAF000800D70 /* YSAnimationVC.m */; };
 		C44EC5E51FCBF2AC00839DF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C44EC5E41FCBF2AC00839DF4 /* AppDelegate.m */; };
@@ -53,6 +54,8 @@
 		043772A921E4D7EB0030E838 /* YSActionHeadV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSActionHeadV.m; sourceTree = "<group>"; };
 		043772AA21E4D7EB0030E838 /* YSActionHeadV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSActionHeadV.h; sourceTree = "<group>"; };
 		043772AB21E4D7EB0030E838 /* YSActionSheetV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSActionSheetV.m; sourceTree = "<group>"; };
+		04DAF93321FA00D8000EBFB0 /* YSCycleV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSCycleV.h; sourceTree = "<group>"; };
+		04DAF93421FA00D8000EBFB0 /* YSCycleV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSCycleV.m; sourceTree = "<group>"; };
 		04E6CBB3324961969B9D71A7 /* libPods-YSKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YSKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44D5D4521EDB55B00800D70 /* YSAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSAnimation.h; sourceTree = "<group>"; };
 		C44D5D4621EDB55B00800D70 /* YSAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSAnimation.m; sourceTree = "<group>"; };
@@ -151,9 +154,19 @@
 			path = ActionSheet;
 			sourceTree = "<group>";
 		};
+		04DAF93221FA0083000EBFB0 /* CycleView */ = {
+			isa = PBXGroup;
+			children = (
+				04DAF93321FA00D8000EBFB0 /* YSCycleV.h */,
+				04DAF93421FA00D8000EBFB0 /* YSCycleV.m */,
+			);
+			path = CycleView;
+			sourceTree = "<group>";
+		};
 		C4129CA921E46DB600DAFC48 /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				04DAF93221FA0083000EBFB0 /* CycleView */,
 				C49D7EC321F043180082DB88 /* Drawing */,
 				C44D5D4921EDDADE00800D70 /* Animation */,
 				C48FDD5521E992E80082F26C /* SwiComponet */,
@@ -483,6 +496,7 @@
 				C49A70E820D0BE06004AA43C /* YSLeftDetailVC.m in Sources */,
 				C4DE1CEB21E83F4A00B6034E /* YSKitUtils.m in Sources */,
 				C48FDD5821E9930F0082F26C /* YSSwiTitleV.m in Sources */,
+				04DAF93521FA00D8000EBFB0 /* YSCycleV.m in Sources */,
 				C49A70E520D0BE06004AA43C /* YSControlVC.m in Sources */,
 				C44EC5FE1FCBF86900839DF4 /* YSSpeechVC.m in Sources */,
 				C4DE1CE821E83EFA00B6034E /* UIImage+Quart.m in Sources */,
